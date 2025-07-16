@@ -5,7 +5,7 @@
     <title>My Travel Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
- /* --- ADVENTURE STYLE THEME --- */
+ /* --- ADVENTUROUS COLOR PALETTE --- */
 :root {
   --accent: #e94e77;
   --adventure-orange: #ff7e5f;
@@ -15,6 +15,9 @@
   --adventure-dark: #1a2a2f;
   --adventure-light: #fffbe6;
   --adventure-brown: #8d5524;
+  --adventure-red: #e94e77;
+  --adventure-purple: #7f53ac;
+  --adventure-teal: #2b908f;
   --adventure-shadow: 0 4px 24px rgba(233,78,119,0.08);
   --adventure-radius: 18px;
   --adventure-font: 'Montserrat', 'Segoe UI', Arial, sans-serif;
@@ -25,24 +28,19 @@ body {
   margin: 0;
   font-family: var(--adventure-font);
   min-height: 100vh;
-  background: linear-gradient(135deg, var(--adventure-orange) 0%, var(--adventure-gold) 40%, var(--adventure-green) 100%);
+  background: linear-gradient(135deg, var(--adventure-orange) 0%, var(--adventure-gold) 30%, var(--adventure-green) 60%, var(--adventure-blue) 100%);
   background-attachment: fixed;
   color: var(--adventure-dark);
 }
 
 /* Adventure nav */
 nav {
-  background: linear-gradient(90deg, var(--adventure-orange) 0%, var(--adventure-green) 100%);
+  background: linear-gradient(90deg, var(--adventure-orange) 0%, var(--adventure-teal) 100%);
   color: #fff;
   box-shadow: var(--adventure-shadow);
   border-bottom-left-radius: var(--adventure-radius);
   border-bottom-right-radius: var(--adventure-radius);
   margin-bottom: 18px;
-}
-.nav-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 nav button {
   background: none;
@@ -58,19 +56,19 @@ nav button {
   transition: background 0.2s, color 0.2s;
 }
 nav button.active, nav button:hover {
-  background: var(--adventure-gold);
-  color: var(--adventure-dark);
+  background: var(--adventure-purple);
+  color: #fffbe6;
 }
 
 /* Adventure hero */
 .hero {
-  background: url('https://media.istockphoto.com/id/486441966/photo/cities-of-the-word-at-night-square-collage.jpg?s=612x612&w=0&k=20&c=QEXN5IybS83pZQ5eV_tHWpx4D9nu_Xi4vU1M_mHUTiw=') center/cover no-repeat;
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
   min-height: 320px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  color: #f58e08;
+  color: #fffbe6;
   text-shadow: 0 4px 24px #0008;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
@@ -81,16 +79,17 @@ nav button.active, nav button:hover {
   margin: 0 0 10px 0;
   letter-spacing: 4px;
   font-weight: bold;
-  font-family: 'Permanent Marker', sans-serif, var(--adventure-font);
+  font-family: 'Permanent Marker', cursive, var(--adventure-font);
+  color: var(--adventure-orange);
 }
 .hero p {
   font-size: 2em;
   margin: 0;
-  color: var(--accent, var(--adventure-orange));
+  color: var(--adventure-gold);
   font-weight: 500;
 }
 h5 {
-  color: var(--adventure-red);
+  color: var(--adventure-purple);
   font-family: 'Permanent Marker', cursive, var(--adventure-font);
   font-size: 2em;
   margin-top: 10px;
@@ -102,7 +101,7 @@ h5 {
 section, .home-main {
   max-width: 900px;
   margin: 40px auto;
-  background: var(--adventure-light);
+  background: rgba(255,251,230,0.92);
   border-radius: var(--adventure-radius);
   box-shadow: var(--adventure-shadow);
   padding: 40px 30px;
@@ -134,7 +133,7 @@ h2, .home-main h2 {
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  background: linear-gradient(135deg, var(--adventure-green) 0%, var(--adventure-orange) 100%);
+  background: linear-gradient(135deg, var(--adventure-green) 0%, var(--adventure-orange) 60%, var(--adventure-purple) 100%);
   border-radius: 14px;
   box-shadow: var(--adventure-shadow);
   overflow: hidden;
@@ -142,7 +141,7 @@ h2, .home-main h2 {
   min-height: 180px;
   cursor: pointer;
   transition: box-shadow 0.2s, transform 0.2s;
-  color: #fff;
+  color: #fffbe6;
 }
 .card:hover {
   box-shadow: 0 8px 32px rgba(233,78,119,0.18);
@@ -177,6 +176,25 @@ h2, .home-main h2 {
   font-size: 1em;
 }
 
+/* TraveLife section cards - more adventurous backgrounds */
+#travelife .card,
+#travelife > div > div {
+  background: linear-gradient(135deg, var(--adventure-red) 0%, var(--adventure-orange) 50%, var(--adventure-green) 100%);
+  color: #fffbe6 !important;
+  box-shadow: 0 2px 12px var(--adventure-orange);
+}
+#travelife h2,
+#travelife h3 {
+  color: var(--adventure-orange);
+}
+#travelife p,
+#travelife ul,
+#travelife li,
+#travelife label,
+#travelife div {
+  color: #fffbe6 !important;
+}
+
 /* Adventure buttons */
 button, .save-btn, .logout-btn, .reset-btn {
   background: linear-gradient(90deg, var(--adventure-orange), var(--adventure-green));
@@ -198,7 +216,7 @@ button:hover, .save-btn:hover, .logout-btn:hover, .reset-btn:hover {
 
 /* Adventure footer */
 footer {
-  background: linear-gradient(90deg, var(--adventure-green) 0%, var(--adventure-orange) 100%);
+  background: linear-gradient(90deg, var(--adventure-teal) 0%, var(--adventure-orange) 100%);
   color: #fff;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
@@ -290,18 +308,6 @@ footer button:hover {
   color: var(--adventure-green);
 }
 
-/* Poll/Quiz/Travelife cards */
-#travelife h2,
-#travelife h3 {
-  color: var(--adventure-orange);
-}
-#travelife .card,
-#travelife > div > div {
-  background: linear-gradient(135deg, var(--adventure-green) 0%, var(--adventure-orange) 100%);
-  color: #fff;
-  box-shadow: 0 2px 12px var(--adventure-orange);
-}
-
 /* Accent color for links */
 a {
   color: var(--adventure-green);
@@ -339,92 +345,6 @@ a {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(30px);}
   to { opacity: 1; transform: translateY(0);}
-}
-body, section, .home-main, .card-content p, .card-content h3, h2, h3, h5, nav, footer, label, span, p, ul, li, button {
-  color: #222 !important;
-}
-
-/* For cards and hero section, ensure text is dark and readable */
-.card, .card-content, .hero h1, .hero p, .hero, h5 {
-  color: #222 !important;
-  text-shadow: none !important;
-}
-
-/* For footer, navigation, and modal, use strong contrast */
-footer, nav, #contact-modal > div, #newsletter-modal > div {
-  color: #222 !important;
-  background: #fff !important;
-}
-
-/* For links, use a bold accent color */
-a {
-  color: #e94e77 !important;
-  text-decoration: underline;
-}
-
-/* For buttons, use dark text if background is light */
-button, .save-btn, .logout-btn, .reset-btn {
-  color: #222 !important;
-  background: linear-gradient(90deg, #ff7e5f, #43cea2) !important;
-}
-
-/* For modal headings and important labels */
-#contact-modal h3, #newsletter-modal h3, label, .icon {
-  color: #e94e77 !important;
-}
-
-/* Remove opacity from spans and paragraphs */
-span, p {
-  opacity: 1 !important;
-}
-
-/* For any element with inline color styles, override with !important */
-* {
-  color: #222 !important;
-}
-#travelife h2,
-#travelife h3,
-#travelife p,
-#travelife ul,
-#travelife li,
-#travelife label,
-#travelife div,
-#travelife button {
-  color: #222 !important;
-}
-
-#travelife .card,
-#travelife > div > div {
-  background: #f7f7f7 !important;
-  color: #222 !important;
-  box-shadow: 0 2px 12px #4787db22;
-}
-
-#travelife button {
-  background: #4787db !important;
-  color: #fff !important;
-}
-section,
-.home-main,
-#travelife .card,
-.card,
-.fancy-settings,
-#contact-modal > div,
-#newsletter-modal > div {
-  background: rgba(255,255,255,0.85) !important;
-  /* Optional: add a subtle blur for readability */
-  backdrop-filter: blur(2px);
-}
-
-/* Make sure text stays dark and readable */
-section,
-.home-main,
-#travelife .card,
-.card,
-.fancy-settings,
-#contact-modal > div,
-#newsletter-modal > div {
-  color: #222 !important;
 }
     </style>
 </head>
