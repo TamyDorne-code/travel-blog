@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Travel Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+ /* --- ADVENTURE STYLE THEME --- */
+:root {
+  --accent: #e94e77;
+  --adventure-orange: #ff7e5f;
+  --adventure-gold: #feb47b;
+  --adventure-green: #43cea2;
+  --adventure-blue: #3a8dde;
+  --adventure-dark: #1a2a2f;
+  --adventure-light: #fffbe6;
+  --adventure-brown: #8d5524;
+  --adventure-shadow: 0 4px 24px rgba(233,78,119,0.08);
+  --adventure-radius: 18px;
+  --adventure-font: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+
+/* Adventure background */
+body {
+  margin: 0;
+  font-family: var(--adventure-font);
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--adventure-orange) 0%, var(--adventure-gold) 40%, var(--adventure-green) 100%);
+  background-attachment: fixed;
+  color: var(--adventure-dark);
+}
+
+/* Adventure nav */
+nav {
+  background: linear-gradient(90deg, var(--adventure-orange) 0%, var(--adventure-green) 100%);
+  color: #fff;
+  box-shadow: var(--adventure-shadow);
+  border-bottom-left-radius: var(--adventure-radius);
+  border-bottom-right-radius: var(--adventure-radius);
+  margin-bottom: 18px;
+}
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav button {
+  background: none;
+  color: #fff;
+  border: none;
+  margin: 0;
+  padding: 18px 38px;
+  font-size: 1.15em;
+  font-weight: bold;
+  border-radius: 0;
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: background 0.2s, color 0.2s;
+}
+nav button.active, nav button:hover {
+  background: var(--adventure-gold);
+  color: var(--adventure-dark);
+}
+
+/* Adventure hero */
+.hero {
+  background: url('https://media.istockphoto.com/id/486441966/photo/cities-of-the-word-at-night-square-collage.jpg?s=612x612&w=0&k=20&c=QEXN5IybS83pZQ5eV_tHWpx4D9nu_Xi4vU1M_mHUTiw=') center/cover no-repeat;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #f58e08;
+  text-shadow: 0 4px 24px #0008;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  margin-bottom: 40px;
+}
+.hero h1 {
+  font-size: 4em;
+  margin: 0 0 10px 0;
+  letter-spacing: 4px;
+  font-weight: bold;
+  font-family: 'Permanent Marker', sans-serif, var(--adventure-font);
+}
+.hero p {
+  font-size: 2em;
+  margin: 0;
+  color: var(--accent, var(--adventure-orange));
+  font-weight: 500;
+}
+h5 {
+  color: var(--adventure-red);
+  font-family: 'Permanent Marker', cursive, var(--adventure-font);
+  font-size: 2em;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 400;
+}
+
+/* Adventure sections */
+section, .home-main {
+  max-width: 900px;
+  margin: 40px auto;
+  background: var(--adventure-light);
+  border-radius: var(--adventure-radius);
+  box-shadow: var(--adventure-shadow);
+  padding: 40px 30px;
+  display: none;
+  animation: fadeIn 0.7s;
+}
+section.active, .home-main {
+  display: block;
+}
+h2, .home-main h2 {
+  color: var(--adventure-orange);
+  margin-top: 0;
+  font-size: 2.2em;
+  font-family: 'Permanent Marker', cursive, var(--adventure-font);
+}
+.home-main p {
+  color: var(--adventure-green);
+  font-size: 1.2em;
+}
+
+/* Adventure cards */
+.card-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 30px;
+}
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  background: linear-gradient(135deg, var(--adventure-green) 0%, var(--adventure-orange) 100%);
+  border-radius: 14px;
+  box-shadow: var(--adventure-shadow);
+  overflow: hidden;
+  width: 100%;
+  min-height: 180px;
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.2s;
+  color: #fff;
+}
+.card:hover {
+  box-shadow: 0 8px 32px rgba(233,78,119,0.18);
+  transform: scale(1.03) rotate(-1deg);
+}
+.card img {
+  width: 260px;
+  min-width: 180px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px 0 0 14px;
+  display: block;
+  filter: brightness(0.92) contrast(1.1);
+}
+.card-content {
+  flex: 1;
+  padding: 32px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+.card-content h3 {
+  margin: 0 0 8px 0;
+  color: var(--adventure-gold);
+  font-size: 1.2em;
+  font-family: 'Permanent Marker', cursive, var(--adventure-font);
+}
+.card-content p {
+  margin: 0;
+  color: #fffbe6;
+  font-size: 1em;
+}
+
+/* Adventure buttons */
+button, .save-btn, .logout-btn, .reset-btn {
+  background: linear-gradient(90deg, var(--adventure-orange), var(--adventure-green));
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 22px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 1px 6px var(--adventure-orange);
+  font-size: 1.1em;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+button:hover, .save-btn:hover, .logout-btn:hover, .reset-btn:hover {
+  background: linear-gradient(90deg, var(--adventure-green), var(--adventure-orange));
+  color: var(--adventure-dark);
+  transform: scale(1.05);
+}
+
+/* Adventure footer */
+footer {
+  background: linear-gradient(90deg, var(--adventure-green) 0%, var(--adventure-orange) 100%);
+  color: #fff;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  box-shadow: 0 -4px 24px rgba(233,78,119,0.08);
+  padding: 32px 0 0 0;
+  margin-top: 60px;
+}
+footer a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+footer button {
+  background: #fff;
+  color: var(--adventure-orange);
+  box-shadow: 0 1px 4px var(--adventure-orange);
+}
+footer button:hover {
+  background: var(--adventure-orange);
+  color: #fff;
+}
+
+/* Adventure settings menu */
+.fancy-settings {
+  background: rgba(255,251,230,0.96);
+  border-radius: 28px;
+  box-shadow: 0 12px 48px 0 rgba(233,78,119,0.22), 0 2px 8px var(--adventure-orange);
+  border: 2.5px solid var(--accent, var(--adventure-orange));
+}
+.fancy-settings .close-btn {
+  color: var(--accent, var(--adventure-orange));
+}
+.fancy-settings .close-btn:hover {
+  color: var(--adventure-gold);
+}
+.fancy-settings .profile-pic-wrap img {
+  border: 3px solid var(--accent, var(--adventure-orange));
+  box-shadow: 0 2px 12px var(--adventure-orange);
+}
+.fancy-settings .save-btn, .fancy-settings .logout-btn {
+  background: linear-gradient(90deg, var(--adventure-green), var(--adventure-orange));
+}
+.fancy-settings .reset-btn {
+  color: var(--adventure-orange);
+  border: 1.5px solid var(--adventure-orange);
+}
+.fancy-settings .reset-btn:hover {
+  background: var(--adventure-light);
+}
+.fancy-settings .profile-fields label {
+  color: var(--adventure-orange);
+}
+.fancy-settings .progress-bar-bg {
+  box-shadow: 0 1px 4px var(--adventure-orange);
+}
+.fancy-settings .progress-bar {
+  background: linear-gradient(90deg, var(--adventure-orange), var(--adventure-gold));
+}
+.fancy-settings .icon {
+  color: var(--adventure-orange);
+}
+.fancy-settings select:focus, .fancy-settings input:focus, .fancy-settings textarea:focus {
+  outline: 2px solid var(--adventure-orange);
+  background: var(--adventure-light);
+}
+
+/* Contact Modal */
+#contact-modal > div {
+  background: var(--adventure-light);
+  box-shadow: 0 8px 32px var(--adventure-orange);
+  border-radius: 22px;
+}
+#contact-modal h3 {
+  color: var(--adventure-orange);
+}
+#contact-modal button,
+#contact-modal input[type="submit"] {
+  background: linear-gradient(90deg, var(--adventure-orange), var(--adventure-green));
+  color: #fff;
+}
+#contact-modal label,
+#contact-modal span {
+  color: var(--adventure-orange);
+}
+#contact-modal .contact-success {
+  color: var(--adventure-green);
+}
+#contact-modal a {
+  color: var(--adventure-green);
+}
+
+/* Poll/Quiz/Travelife cards */
+#travelife h2,
+#travelife h3 {
+  color: var(--adventure-orange);
+}
+#travelife .card,
+#travelife > div > div {
+  background: linear-gradient(135deg, var(--adventure-green) 0%, var(--adventure-orange) 100%);
+  color: #fff;
+  box-shadow: 0 2px 12px var(--adventure-orange);
+}
+
+/* Accent color for links */
+a {
+  color: var(--adventure-green);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  section, .home-main {
+    padding: 18px 6vw;
+  }
+  .card img {
+    width: 300px;
+    min-width: 100px;
+  }
+}
+@media (max-width: 700px) {
+  .hero h1 { font-size: 2em; }
+  .hero p { font-size: 1em; }
+  section, .home-main { padding: 12px 2vw; }
+  .card-grid { gap: 18px; }
+  .card {
+    flex-direction: column;
+    min-height: unset;
+  }
+  .card img {
+    width: 100%;
+    height: 300px;
+    border-radius: 14px 14px 0 0;
+  }
+  .card-content {
+    padding: 18px 16px 14px 16px;
+  }
+  nav button { padding: 14px 10px; font-size: 1em; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+    </style>
+</head>
+<body>
+
+    <body style="background: url('https://t3.ftcdn.net/jpg/08/50/87/28/360_F_850872883_uJZQplaPiH3JtEXsSIFbvvrQNt2t6GCI.jpg') center/cover no-repeat fixed;">
+<!-- ...existing code... -->
+  <nav>
+    <div class="nav-container">
+        <button id="nav-home" class="active" onclick="navigateSection('home')">Home</button>
+        <button id="nav-dest" onclick="navigateSection('destinations')">Destinations</button>
+        <button id="nav-tips" onclick="navigateSection('tips')">Tips</button>
+        <button id="nav-exp" onclick="navigateSection('experiences')">Experiences</button>
+    </div>
+</nav>
+    <div class="hero">
+        <h1>Around The World</h1>
+        <p>Explore destinations, get tips, and read about my adventures!</p>
+        <h5>Every place leads to a new adventure.</h5>
+    </div>
+    <main>
+<section id="home" class="active">
+    <div class="home-main">
+        <h2>Welcome, Traveler!</h2>
+        <p>
+            Discover the world through travel. From the bustling streets of Tokyo to the serene beaches of Maldives, this blog is your guide to exploring new cultures, cuisines, and experiences. Whether you're a seasoned traveler or planning your first trip, you'll find inspiration and practical tips to make your journey unforgettable.
+        </p>
+        <p>Adventures Across All Seven Continents</p>
+        <!-- Member Badge and Settings (hidden by default) -->
+        <div id="member-area" style= margin-top:24px;">
+            <span id="member-badge" style="display:inline-block; background:#4787db; color:#fff; padding:8px 18px; border-radius:20px; font-weight:bold; font-size:1.1em; margin-right:16px;">
+                🌍 Member
+            </span>
+            <button onclick="toggleSettings()" style="background:#fff; color:#4787db; border:1px solid #4787db; border-radius:18px; padding:8px 16px; font-weight:bold; cursor:pointer;">
+                Settings ⚙️
+            </button>
+<!-- ...inside #member-area... -->
+<div id="settings-menu" class="fancy-settings">
+  <button onclick="toggleSettings()" class="close-btn">&times;</button>
+  <div class="profile-row">
+    <div class="profile-pic-wrap">
+      <img id="profile-pic" src="https://ui-avatars.com/api/?name=Traveler&background=4787db&color=fff&rounded=true&size=80" alt="Profile Picture">
+        <span title="Change picture">&#9998;</span>
+      </label>
+    </div>
+    <div class="profile-fields">
+      <div>
+        <label><span class="icon">🧑</span> <span data-i18n="nickname">Nickname</span>:</label>
+        <input id="profile-nickname" type="text" placeholder="Your nickname">
+      </div>
+      <div>
+        <label><span class="icon">📝</span> <span data-i18n="bio">Bio</span>:</label>
+        <textarea id="profile-bio" placeholder="Tell us about yourself"></textarea>
+      </div>
+      <button onclick="saveProfile()" class="save-btn"><span class="icon">💾</span> <span data-i18n="save">Save</span></button>
+    </div>
+  </div>
+ <div class="settings-row">
+    <label for="profile-public-toggle" class="toggle-label">
+      <input type="checkbox" id="profile-public-toggle">
+      <span class="icon">🌏</span> <span data-i18n="public_profile">Public Profile</span>
+    </label>
+  </div>
+  <div class="settings-row">
+    <label for="notif-toggle" class="toggle-label">
+      <input type="checkbox" id="notif-toggle">
+      <span class="icon">🔔</span> <span data-i18n="notifications">Email Notifications</span>
+    </label>
+  </div>
+  <div class="settings-row">
+    <label for="contrast-toggle" class="toggle-label">
+      <input type="checkbox" id="contrast-toggle">
+      <span class="icon">🦾</span> <span data-i18n="high_contrast">High Contrast</span>
+    </label>
+  </div>
+  <div class="settings-row">
+    <label for="animation-toggle" class="toggle-label">
+      <input type="checkbox" id="animation-toggle" checked>
+      <span class="icon">🎞️</span> <span data-i18n="animations">Enable Animations</span>
+    </label>
+  </div>
+  <div class="progress-wrap">
+    <label><span class="icon">🏆</span> <span data-i18n="profile_complete">Profile Completeness</span>:</label>
+    <div class="progress-bar-bg">
+      <div id="profile-progress" class="progress-bar"></div>
+    </div>
+  </div>
+  <div class="settings-row">
+    <label for="language-select"><span class="icon">🌐</span> <span data-i18n="language">Language</span>:</label>
+    <select id="language-select">
+      <option value="en">English</option>
+      <option value="es">Español</option>
+      <option value="fr">Français</option>
+      <option value="de">Deutsch</option>
+    </select>
+  </div>
+  <div class="settings-row">
+    <label for="font-select"><span class="icon">🔤</span> <span data-i18n="font">Font</span>:</label>
+    <select id="font-select">
+      <option value="'Segoe UI', Arial, sans-serif">Default</option>
+      <option value="Georgia, serif">Georgia</option>
+      <option value="'Courier New', monospace">Courier New</option>
+      <option value="'Comic Sans MS', cursive, sans-serif">Comic Sans</option>
+      <option value="'Playfair Display', serif">Playfair Display</option>
+      <option value="'Fira Code', monospace">Fira Code</option>
+    </select>
+  </div>
+  <div class="settings-row">
+    <label for="theme-select"><span class="icon">🎨</span> <span data-i18n="theme">Theme</span>:</label>
+    <select id="theme-select">
+      <option value="auto">Auto</option>
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+      <option value="pastel">Pastel</option>
+      <option value="sepia">Sepia</option>
+      <option value="ocean">Ocean</option>
+      <option value="forest">Forest</option>
+    </select>
+  </div>
+  <div class="settings-row">
+    <label for="accent-color"><span class="icon">🌈</span> <span data-i18n="accent">Accent Color</span>:</label>
+    <input type="color" id="accent-color" value="#4787db">
+  </div>
+  <div class="settings-row">
+    <label for="font-size-slider"><span class="icon">🔎</span> <span data-i18n="fontsize">Font Size</span>:</label>
+    <input type="range" id="font-size-slider" min="14" max="28" value="16">
+    <span id="font-size-value">16px</span>
+  </div>
+  <div class="settings-row">
+    <label class="toggle-label">
+      <input type="checkbox" id="dark-mode-toggle" onchange="toggleDarkMode()">
+      <span class="icon">🌙</span> <span data-i18n="darkmode">Dark Mode</span>
+    </label>
+  </div>
+
+  <div class="settings-row">
+    <label for="music-toggle" class="toggle-label">
+      <input type="checkbox" id="music-toggle">
+      <span class="icon">🎵</span> Background Music
+    </label>
+    <audio id="bg-music" loop src="https://cdn.pixabay.com/audio/2022/10/16/audio_12b5fae3b1.mp3"></audio>
+  </div>
+  <div class="settings-actions">
+    <button onclick="resetSettings()" class="reset-btn"><span class="icon">♻️</span> <span data-i18n="reset">Reset to Default</span></button>
+    <button onclick="logoutMember()" class="logout-btn"><span class="icon">🚪</span> <span data-i18n="logout">Log Out</span></button>
+  </div>
+</section>
+<!-- ...existing code... -->
+<section id="destinations">
+    <h2>Destinations by Continent</h2>
+    <div class="card-grid">
+        <div class="card horizontal" onclick="location.href='africa.html'" style="cursor:pointer;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ5mts4BGYPOUgJdEc98S4QT2smfoK6Eozdg&s" alt="Africa">
+            <div class="card-content">
+                <h3>Africa</h3>
+                <p>Safari adventures, pyramids, and vibrant cultures.</p>
+            </div>
+        </div>
+        <div class="card horizontal" onclick="location.href='asia.html'" style="cursor:pointer;">
+            <img src="https://asiapioneertravel.com/wp-content/uploads/2024/05/southeast-asia-tours-for-young-adults-1.jpg" alt="Asia">
+            <div class="card-content">
+                <h3>Asia</h3>
+                <p>Temples, street food, and diverse landscapes.</p>
+            </div>
+        </div>
+        <div class="card horizontal" onclick="location.href='europe.html'" style="cursor:pointer;">
+            <img src="https://wallpapers.com/images/hd/europe-pictures-ifwlzvqorrakjjvg.jpg" alt="Europe">
+            <div class="card-content">
+                <h3>Europe</h3>
+                <p>Historic cities, art, and beautiful countryside.</p>
+            </div>
+        </div>
+        <div class="card horizontal" onclick="location.href='north-america.html'" style="cursor:pointer;">
+            <img src="https://petapixel.com/assets/uploads/2017/01/northamericatripfeat.jpg" alt="North America">
+            <div class="card-content">
+                <h3>North America</h3>
+                <p>National parks, skyscrapers, and road trips.</p>
+            </div>
+        </div>
+        <div class="card horizontal" onclick="location.href='south-america.html'" style="cursor:pointer;">
+            <img src="https://www.wendywutours.com.au/blog/wp-content/uploads/2019/02/image_3-1.jpg" alt="South America">
+            <div class="card-content">
+                <h3>South America</h3>
+                <p>Rainforests, mountains, and ancient ruins.</p>
+            </div>
+        </div>
+        <div class="card horizontal" onclick="location.href='australia.html'" style="cursor:pointer;">
+            <img src="https://www.kids-world-travel-guide.com/images/xaustralia_sydney_shutterstock_src50.jpg.pagespeed.ic.DuhRmokiyI.jpg" alt="Australia">
+            <div class="card-content">
+                <h3>Australia & Oceania</h3>
+                <p>Beaches, reefs, and unique wildlife.</p>
+            </div>
+        </div>
+        <div class="card horizontal" onclick="location.href='antarctica.html'" style="cursor:pointer;">
+            <img src="https://cdn.oceanographicmagazine.com/wp-content/uploads/2019/10/07104929/emperor-penguns-1.jpg" alt="Antarctica">
+            <div class="card-content">
+                <h3>Antarctica</h3>
+                <p>Icebergs, penguins, and the adventure of a lifetime.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ...existing code... -->
+<!-- ...existing code... -->
+<section id="tips">
+    <h2>Travel Tips by Continent</h2>
+    <div class="card-grid">
+        <div class="card" onclick="location.href='africa-tips.html'" style="cursor:pointer;">
+            <img src="https://cdn.one.org/international/media/international/2015/07/AfricaCollage.jpg" alt="Africa Tips">
+            <div class="card-content">
+                <h3>Africa</h3>
+                <p>Packing, safety, and local advice for Africa.</p>
+            </div>
+        </div>
+        <div class="card" onclick="location.href='asia-tips.html'" style="cursor:pointer;">
+            <img src="https://media.istockphoto.com/id/510948962/photo/wet-market-in-hong-kong.jpg?s=612x612&w=0&k=20&c=vIZ-_7u_XgUDbXkFz6wdUsWEKiYAOarWAqq7mxmPuC0=" alt="Asia Tips">
+            <div class="card-content">
+                <h3>Asia</h3>
+                <p>Travel hacks, food, and etiquette for Asia.</p>
+            </div>
+        </div>
+        <div class="card" onclick="location.href='europe-tips.html'" style="cursor:pointer;">
+            <img src="https://www.across-magazine.com/wp-content/uploads/2024/10/collage_740x400-1.jpg" alt="Europe Tips">
+            <div class="card-content">
+                <h3>Europe</h3>
+                <p>Budgeting, transport, and must-see tips for Europe.</p>
+            </div>
+        </div>
+        <div class="card" onclick="location.href='north-america-tips.html'" style="cursor:pointer;">
+            <img src="https://puzzlemania-154aa.kxcdn.com/products/2024/puzzle-educa-1500-pieces-symbols-from-north-america.webp" alt="North America Tips">
+            <div class="card-content">
+                <h3>North America</h3>
+                <p>Road trip, city, and national park tips.</p>
+            </div>
+        </div>
+        <div class="card" onclick="location.href='south-america-tips.html'" style="cursor:pointer;">
+            <img src="https://veetravels.com/wp-content/uploads/2014/01/south-america-travel-photos.jpg" alt="South America Tips">
+            <div class="card-content">
+                <h3>South America</h3>
+                <p>Adventure, language, and safety tips.</p>
+            </div>
+        </div>
+        <div class="card" onclick="location.href='australia-tips.html'" style="cursor:pointer;">
+            <img src="https://letsjourney.co.in/wp-content/uploads/2024/07/Austrialia-Image.png" alt="Australia Tips">
+            <div class="card-content">
+                <h3>Australia & Oceania</h3>
+                <p>Outback, wildlife, and weather tips.</p>
+            </div>
+        </div>
+        <div class="card" onclick="location.href='antarctica-tips.html'" style="cursor:pointer;">
+            <img src="https://polarbearscience.com/wp-content/uploads/2024/10/64681-polar-animals-collage-feb-2023.jpg" alt="Antarctica Tips">
+            <div class="card-content">
+                <h3>Antarctica</h3>
+                <p>Preparation, gear, and cruise tips.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="experiences">
+    <h2>Travel Experiences by Continent</h2>
+    <div class="card-grid">
+        <div class="card" onclick="location.href='africa-experiences.html'" style="cursor:pointer;">
+            <img src="https://www.hatching-dragons.com/hubfs/July%20-%20Africa-1-1.webp" alt="Africa Experiences">
+            <div class="card-content">
+                <h3>Africa</h3>
+                <p>Safari, culture, and adventure stories.</p>
+            </div>
+        </div>
+        <div class="card" onclick="location.href='asia-experiences.html'" style="cursor:pointer;">
+            <img src="https://cdn.pixabay.com/photo/2021/02/19/11/53/collage-6029978_960_720.jpg" alt="Asia Experiences">
+            <div class="card-content">
+                <h3>Asia</h3>
+                <p>Temples, street food, and festival tales.</p>
+            </div>
+        </div>
+        <div class="card" onclick="location.href='europe-experiences.html'" style="cursor:pointer;">
+            <img src="https://www.shutterstock.com/image-illustration/vintage-travel-background-retro-photos-600nw-1936008868.jpg" alt="Europe Experiences">
+            <div class="card-content">
+                <h3>Europe</h3>
+                <p>Historic cities, art, and countryside adventures.</p>
+            </div>
+        </div>
+        <div class="card" onclick="location.href='north-america-experiences.html'" style="cursor:pointer;">
+            <img src="https://i.pinimg.com/736x/12/9e/8a/129e8a639a4534e5dfe36232f1f92e03.jpg" alt="North America Experiences">
+            <div class="card-content">
+                <h3>North America</h3>
+                <p>National parks, city life, and road trip stories.</p>
+            </div>
+        </div>
+        <div class="card" onclick="location.href='south-america-experiences.html'" style="cursor:pointer;">
+            <img src="https://dailynews.mcmaster.ca/wp-content/uploads/sites/3/2022/07/Latin-American-minor-art-768x455.png" alt="South America Experiences">
+            <div class="card-content">
+                <h3>South America</h3>
+                <p>Amazon, Andes, and ancient civilization tales.</p>
+            </div>
+        </div>
+        <div class="card" onclick="location.href='australia-experiences.html'" style="cursor:pointer;">
+            <img src="https://thumbs.dreamstime.com/b/australian-collage-travel-australia-as-travel-destination-96283299.jpg" alt="Australia Experiences">
+            <div class="card-content">
+                <h3>Australia & Oceania</h3>
+                <p>Great Barrier Reef, outback, and island stories.</p>
+            </div>
+        </div>
+   </div>
+        <div class="card" onclick="location.href='antarctica-experiences.html'" style="cursor:pointer;">
+            <img src="https://shackleton.com/cdn/shop/files/Polar-Pioneers---Collage-Image-10-1280-x-1920-4.jpg?v=1732639773&width=1280" alt="Antarctica Experiences">
+            <div class="card-content">
+                <h3>Antarctica</h3>
+                <p>Ice, wildlife, and expedition adventures.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ...existing code... -->
+<section id="travelife">
+  <div style="text-align:center;">
+    <h2 style="color:#4787db;font-size:2.3em;margin-bottom:10px;">🌟 TraveLife: Explore More About Our World</h2>
+<img src="https://cdn2.paraty.es/landmar/images/3fa33555746a4b9"
+     alt="TraveLife Logo" style="max-width:400px;width:60vw;height:auto;border-radius:18px;box-shadow:0 2px 16px #4787db33;margin-bottom:24px;">
+    <p style="font-size:1.18em;max-width:700px;margin:18px auto 30px auto;">
+      Welcome to <b>TraveLife</b>! Dive into fascinating facts, global wonders, and inspiration to fuel your wanderlust. Discover interactive features, fun stats, and more!
+    </p>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:32px;justify-content:center;">
+    <!-- Fun Facts Card -->
+    <div style="background:#f7f7f7;border-radius:14px;box-shadow:0 2px 12px #4787db22;padding:24px 22px;max-width:340px;flex:1 1 300px;">
+      <h3 style="color:#4787db;">🌍 Fun Fact</h3>
+      <p id="travelife-fact" style="font-size:1.08em;margin-bottom:16px;">
+        Did you know? The Amazon rainforest produces more than 20% of the world's oxygen supply.
+      </p>
+      <button onclick="showRandomFact()" style="background:#4787db;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:bold;">
+        Show Another Fact
+      </button>
+    </div>
+    <!-- World Stats Card -->
+    <div style="background:#f7f7f7;border-radius:14px;box-shadow:0 2px 12px #4787db22;padding:24px 22px;max-width:340px;flex:1 1 300px;">
+      <h3 style="color:#4787db;">🌐 World Stats</h3>
+      <ul style="list-style:none;padding:0;font-size:1.08em;line-height:1.7;">
+        <li>Countries: <b>195</b></li>
+        <li>Continents: <b>7</b></li>
+        <li>Oceans: <b>5</b></li>
+        <li>Languages: <b>~7,000+</b></li>
+        <li>UNESCO Sites: <b>1,199</b></li>
+      </ul>
+    </div>
+    <!-- Interactive Quiz Card -->
+    <div style="background:#f7f7f7;border-radius:14px;box-shadow:0 2px 12px #4787db22;padding:24px 22px;max-width:340px;flex:1 1 300px;">
+      <h3 style="color:#4787db;">🧠 Quick Quiz</h3>
+      <div id="quiz-question" style="font-size:1.08em;margin-bottom:10px;">
+        What is the largest country in the world by area?
+      </div>
+      <div>
+        <button onclick="checkQuizAnswer('Russia')" style="margin:4px 0;background:#4787db;color:#fff;border:none;border-radius:7px;padding:6px 14px;cursor:pointer;">Russia</button>
+        <button onclick="checkQuizAnswer('Canada')" style="margin:4px 0;background:#4787db;color:#fff;border:none;border-radius:7px;padding:6px 14px;cursor:pointer;">Canada</button>
+        <button onclick="checkQuizAnswer('China')" style="margin:4px 0;background:#4787db;color:#fff;border:none;border-radius:7px;padding:6px 14px;cursor:pointer;">China</button>
+      </div>
+      <div id="quiz-result" style="margin-top:10px;font-weight:bold;color:#4787db;"></div>
+    </div>
+
+    <!-- Interactive Poll Card -->
+    <div style="background:#f7f7f7;border-radius:14px;box-shadow:0 2px 12px #4787db22;padding:24px 22px;max-width:340px;flex:1 1 300px;">
+      <h3 style="color:#4787db;">📊 Your Dream Destination</h3>
+      <form id="poll-form" onsubmit="submitPoll();return false;">
+        <label><input type="radio" name="poll" value="Japan"> Canada</label><br>
+        <label><input type="radio" name="poll" value="Italy"> Italy</label><br>
+        <label><input type="radio" name="poll" value="Australia"> Australia</label><br>
+        <label><input type="radio" name="poll" value="Brazil"> Brazil</label><br>
+        <button type="submit" style="margin-top:10px;background:#4787db;color:#fff;border:none;border-radius:7px;padding:6px 14px;cursor:pointer;">Vote</button>
+      </form>
+      <div id="poll-result" style="margin-top:10px;font-weight:bold;color:#4787db;"></div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:36px;">
+    <button onclick="navigateSection('home')" style="background:#4787db;color:#fff;border:none;border-radius:8px;padding:10px 28px;cursor:pointer;font-weight:bold;font-size:1.1em;">
+      ← Back to Home
+    </button>
+  </div>
+</section>
+
+
+
+</main>
+<script>
+function showRandomFact() {
+  const facts = [
+    "Did you know? France is the most visited country in the world.",
+    "The shortest commercial flight in the world is just 2 minutes long (Westray to Papa Westray, Scotland).",
+    "There are no rivers in Saudi Arabia.",
+    "Canada has more lakes than the rest of the world’s lakes combined.",
+    "The world’s longest place name is 85 letters long: Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu (New Zealand).",
+    "Venice, Italy, is slowly sinking at a rate of 1-2 millimeters per year.",
+    "Antarctica is the only continent with no native reptiles or snakes.",
+    "The Pacific Ocean is the largest and deepest ocean on the planet.",
+    "Australia is home to more kangaroos than people!",
+    "Every day, somewhere in the world, a festival is being celebrated."
+  ];
+  document.getElementById('travelife-fact').textContent =
+    facts[Math.floor(Math.random() * facts.length)];
+}
+
+function checkQuizAnswer(answer) {
+  const result = document.getElementById('quiz-result');
+  if (answer === 'Russia') {
+    result.textContent = "Correct! Russia is the largest country by area.";
+    result.style.color = "#2ecc40";
+  } else {
+    result.textContent = "Oops! Try again.";
+    result.style.color = "#e94e77";
+  }
+}
+
+// Simple poll logic (stores vote in localStorage)
+function submitPoll() {
+  const pollForm = document.getElementById('poll-form');
+  const selected = pollForm.querySelector('input[name="poll"]:checked');
+  const resultDiv = document.getElementById('poll-result');
+  if (!selected) {
+    resultDiv.textContent = "Please select an option!";
+    resultDiv.style.color = "#e94e77";
+    return;
+  }
+  const vote = selected.value;
+  // Save vote to localStorage (for demo, not persistent across users)
+  localStorage.setItem('travelifePollVote', vote);
+  resultDiv.textContent = "Thank you for voting! Your dream destination: " + vote;
+  resultDiv.style.color = "#4787db";
+  pollForm.style.display = "none";
+}
+
+// Restore poll state if already voted
+window.addEventListener('DOMContentLoaded', function() {
+  const vote = localStorage.getItem('travelifePollVote');
+  if (vote && document.getElementById('poll-form')) {
+    document.getElementById('poll-form').style.display = "none";
+    document.getElementById('poll-result').textContent = "You voted: " + vote;
+    document.getElementById('poll-result').style.color = "#4787db";
+  }
+});
+</script>
+<script>
+  // Navigation with memory of last section
+  function navigateSection(sectionId) {
+      localStorage.setItem('lastSection', sectionId);
+      showSection(sectionId);
+  }
+       document.getElementById('profile-public-toggle').addEventListener('change', function() {
+    localStorage.setItem('profilePublic', this.checked ? 'true' : 'false');
+    alert('Public profile ' + (this.checked ? 'enabled' : 'disabled') + '!');
+  });
+  // Email notifications toggle
+  document.getElementById('notif-toggle').addEventListener('change', function() {
+    localStorage.setItem('emailNotif', this.checked ? 'true' : 'false');
+    alert('Email notifications ' + (this.checked ? 'enabled' : 'disabled') + '!');
+  });
+  // High contrast toggle
+  document.getElementById('contrast-toggle').addEventListener('change', function() {
+    if(this.checked) {
+      document.body.style.filter = "contrast(1.2)";
+      localStorage.setItem('highContrast', 'true');
+    } else {
+      document.body.style.filter = "";
+      localStorage.setItem('highContrast', 'false');
+    }
+  });
+  // Animations toggle
+  document.getElementById('animation-toggle').addEventListener('change', function() {
+    if(!this.checked) {
+      document.body.classList.add('no-animations');
+      localStorage.setItem('animations', 'false');
+    } else {
+      document.body.classList.remove('no-animations');
+      localStorage.setItem('animations', 'true');
+    }
+  });
+  // On load, restore toggles
+  window.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('profile-public-toggle').checked = localStorage.getItem('profilePublic') === 'true';
+    document.getElementById('notif-toggle').checked = localStorage.getItem('emailNotif') === 'true';
+    document.getElementById('contrast-toggle').checked = localStorage.getItem('highContrast') === 'true';
+    document.getElementById('animation-toggle').checked = localStorage.getItem('animations') !== 'false';
+    if(localStorage.getItem('highContrast') === 'true') document.body.style.filter = "contrast(1.2)";
+    if(localStorage.getItem('animations') === 'false') document.body.classList.add('no-animations');
+  });
+  function showSection(sectionId) {
+      document.querySelectorAll('main > section').forEach(sec => sec.classList.remove('active'));
+      document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
+      document.getElementById(sectionId).classList.add('active');
+      if(sectionId === 'home') document.getElementById('nav-home').classList.add('active');
+      if(sectionId === 'destinations') document.getElementById('nav-dest').classList.add('active');
+      if(sectionId === 'tips') document.getElementById('nav-tips').classList.add('active');
+      if(sectionId === 'experiences') document.getElementById('nav-exp').classList.add('active');
+  }
+
+  // Show member badge/settings if member
+  function updateMemberUI() {
+      const isMember = localStorage.getItem('isMember') === 'true';
+      document.getElementById('member-area').style.display = isMember ? '' : 'none';
+      // Set dark mode toggle state
+      document.getElementById('dark-mode-toggle').checked = localStorage.getItem('darkMode') === 'true';
+      applyDarkMode();
+  }
+
+  // Settings menu toggle
+ function toggleSettings() {
+  const menu = document.getElementById('settings-menu');
+  menu.classList.toggle('show');
+}
+
+  // Dark mode logic
+  function toggleDarkMode() {
+      const enabled = document.getElementById('dark-mode-toggle').checked;
+      localStorage.setItem('darkMode', enabled ? 'true' : 'false');
+      applyDarkMode();
+  }
+  function applyDarkMode() {
+      if(localStorage.getItem('darkMode') === 'true') {
+          document.body.style.background = "#222";
+          document.body.style.color = "#eee";
+          document.querySelectorAll('section, .home-main').forEach(el => {
+              el.style.background = "#222";
+              el.style.color = "#eee";
+          });
+          document.querySelectorAll('.card').forEach(el => {
+              el.style.background = "#333";
+              el.style.color = "#eee";
+          });
+          document.querySelectorAll('footer').forEach(el => {
+              el.style.background = "#222";
+              el.style.color = "#eee";
+          });
+      } else {
+          document.body.style.background = "";
+          document.body.style.color = "";
+          document.querySelectorAll('section, .home-main').forEach(el => {
+              el.style.background = "#fff";
+              el.style.color = "";
+          });
+          document.querySelectorAll('.card').forEach(el => {
+              el.style.background = "#f7f7f7";
+              el.style.color = "";
+          });
+          document.querySelectorAll('footer').forEach(el => {
+              el.style.background = "#4787db";
+              el.style.color = "#fff";
+          });
+      }
+  }
+
+  // Log out logic
+  function logoutMember() {
+      localStorage.removeItem('isMember');
+      document.getElementById('member-area').style.display = 'none';
+      // Optionally, reset dark mode
+      localStorage.removeItem('darkMode');
+      applyDarkMode();
+      closeNewsletterModal();
+      alert('You have been logged out.');
+  }
+
+  // Newsletter modal logic
+  function openNewsletterModal() {
+    document.getElementById('newsletter-modal').style.display = 'flex';
+    document.getElementById('newsletter-form').style.display = '';
+    document.getElementById('member-message').style.display = 'none';
+    document.getElementById('newsletter-email').value = '';
+  }
+  function closeNewsletterModal() {
+    document.getElementById('newsletter-modal').style.display = 'none';
+  }
+  function subscribeMember() {
+    document.getElementById('newsletter-form').style.display = 'none';
+    document.getElementById('member-message').style.display = '';
+    localStorage.setItem('isMember', 'true');
+    setTimeout(function() {
+      closeNewsletterModal();
+      updateMemberUI();
+    }, 2000);
+    return false;
+  }
+
+  // On page load, go to last visited section if exists and update member UI
+  window.addEventListener('DOMContentLoaded', function() {
+      const last = localStorage.getItem('lastSection');
+      if (last && document.getElementById(last)) {
+          showSection(last);
+      }
+      updateMemberUI();
+  });
+ function saveProfile() {
+  const nickname = document.getElementById('profile-nickname').value;
+  const bio = document.getElementById('profile-bio').value;
+  localStorage.setItem('profileNickname', nickname);
+  localStorage.setItem('profileBio', bio);
+  const pic = document.getElementById('profile-pic').src;
+  localStorage.setItem('profilePic', pic);
+  alert('Profile saved!');
+  updateProfileBadge();
+  updateProfileProgress();
+}
+function updateProfileBadge() {
+  const badge = document.getElementById('member-badge');
+  const nickname = localStorage.getItem('profileNickname');
+  const pic = localStorage.getItem('profilePic');
+  if (badge) {
+    badge.innerHTML = (pic ? `<img src="${pic}" style="width:28px;height:28px;border-radius:50%;vertical-align:middle;margin-right:8px;border:2px solid #fff;box-shadow:0 1px 4px #4787db44;">` : "🌍 ") +
+      (nickname ? nickname : "Member");
+  }
+}
+function updateProfileProgress() {
+  let percent = 0;
+  if(localStorage.getItem('profilePic')) percent += 33;
+  if(localStorage.getItem('profileNickname')) percent += 33;
+  if(localStorage.getItem('profileBio')) percent += 34;
+  document.getElementById('profile-progress').style.width = percent + "%";
+}
+  // Load profile info if set
+window.addEventListener('DOMContentLoaded', function() {
+  // ...existing code...
+  if(localStorage.getItem('profileNickname')) {
+    document.getElementById('profile-nickname').value = localStorage.getItem('profileNickname');
+  }
+  if(localStorage.getItem('profileBio')) {
+    document.getElementById('profile-bio').value = localStorage.getItem('profileBio');
+  }
+  if(localStorage.getItem('profilePic')) {
+    document.getElementById('profile-pic').src = localStorage.getItem('profilePic');
+  }
+  updateProfileBadge();
+  updateProfileProgress();
+  // Language
+  if(localStorage.getItem('language')) {
+    document.getElementById('language-select').value = localStorage.getItem('language');
+  }
+  // Font
+  if(localStorage.getItem('fontFamily')) {
+    document.body.style.fontFamily = localStorage.getItem('fontFamily');
+    document.getElementById('font-select').value = localStorage.getItem('fontFamily');
+  }
+  // Theme
+  if(localStorage.getItem('theme')) {
+    document.getElementById('theme-select').value = localStorage.getItem('theme');
+    applyTheme();
+  }
+  // Accent color
+  if(localStorage.getItem('accentColor')) {
+    document.documentElement.style.setProperty('--accent', localStorage.getItem('accentColor'));
+    document.getElementById('accent-color').value = localStorage.getItem('accentColor');
+  }
+  // Font size
+  if(localStorage.getItem('fontSize')) {
+    document.body.style.fontSize = localStorage.getItem('fontSize') + "px";
+    document.getElementById('font-size-slider').value = localStorage.getItem('fontSize');
+    document.getElementById('font-size-value').textContent = localStorage.getItem('fontSize') + "px";
+  }
+});
+
+  // Profile picture upload
+  document.getElementById('profile-pic-input').addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(evt) {
+      document.getElementById('profile-pic').src = evt.target.result;
+      localStorage.setItem('profilePic', evt.target.result);
+      updateProfileBadge();
+    };
+    reader.readAsDataURL(file);
+  });
+
+  // Language selection
+  document.getElementById('language-select').addEventListener('change', function() {
+    localStorage.setItem('language', this.value);
+    alert('Language preference saved!');
+  });
+
+  // Font selection
+  document.getElementById('font-select').addEventListener('change', function() {
+    document.body.style.fontFamily = this.value;
+    localStorage.setItem('fontFamily', this.value);
+  });
+
+  // Theme selection
+  document.getElementById('theme-select').addEventListener('change', function() {
+    const theme = this.value;
+    localStorage.setItem('theme', theme);
+    applyTheme();
+  });
+  function applyTheme() {
+    const theme = localStorage.getItem('theme');
+    if(theme === 'dark') {
+      localStorage.setItem('darkMode', 'true');
+      applyDarkMode();
+    } else if(theme === 'light') {
+      localStorage.setItem('darkMode', 'false');
+      applyDarkMode();
+    } else {
+      // Auto: use system preference
+      if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        localStorage.setItem('darkMode', 'true');
+      } else {
+        localStorage.setItem('darkMode', 'false');
+      }
+      applyDarkMode();
+    }
+  }
+
+
+// Language selection
+document.getElementById('language-select').addEventListener('change', function() {
+  localStorage.setItem('language', this.value);
+  alert('Language preference saved!');
+});
+
+// Font selection
+document.getElementById('font-select').addEventListener('change', function() {
+  document.body.style.fontFamily = this.value;
+  localStorage.setItem('fontFamily', this.value);
+});
+
+
+// Background music toggle
+document.getElementById('music-toggle').addEventListener('change', function() {
+  const audio = document.getElementById('bg-music');
+  if(this.checked) {
+    audio.volume = 0.25;
+    audio.play();
+    localStorage.setItem('musicOn', 'true');
+  } else {
+    audio.pause();
+    localStorage.setItem('musicOn', 'false');
+  }
+});
+// Restore music toggle
+window.addEventListener('DOMContentLoaded', function() {
+  const musicOn = localStorage.getItem('musicOn') === 'true';
+  document.getElementById('music-toggle').checked = musicOn;
+  if(musicOn) document.getElementById('bg-music').play();
+});
+// Theme selection (with more themes)
+document.getElementById('theme-select').addEventListener('change', function() {
+  const theme = this.value;
+  localStorage.setItem('theme', theme);
+  applyTheme();
+});
+function applyTheme() {
+  const theme = localStorage.getItem('theme');
+  if(theme === 'dark') {
+    localStorage.setItem('darkMode', 'true');
+    applyDarkMode();
+  } else if(theme === 'light') {
+    localStorage.setItem('darkMode', 'false');
+    applyDarkMode();
+  } else if(theme === 'pastel') {
+    document.body.style.background = "linear-gradient(135deg,#f8ffae 0%,#43cea2 100%)";
+    document.body.style.color = "#333";
+  } else if(theme === 'sepia') {
+    document.body.style.background = "#f4ecd8";
+    document.body.style.color = "#5b4636";
+  } else if(theme === 'ocean') {
+    document.body.style.background = "linear-gradient(135deg,#2193b0 0%,#6dd5ed 100%)";
+    document.body.style.color = "#fff";
+  } else if(theme === 'forest') {
+    document.body.style.background = "linear-gradient(135deg,#5a9467 0%,#b0de6d 100%)";
+    document.body.style.color = "#1a3d2f";
+  } else {
+    // Auto: use system preference
+    if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      localStorage.setItem('darkMode', 'true');
+    } else {
+      localStorage.setItem('darkMode', 'false');
+    }
+    applyDarkMode();
+  }
+}
+
+// Accent color picker
+document.getElementById('accent-color').addEventListener('input', function() {
+  document.documentElement.style.setProperty('--accent', this.value);
+  localStorage.setItem('accentColor', this.value);
+});
+
+// Font size slider
+document.getElementById('font-size-slider').addEventListener('input', function() {
+  document.body.style.fontSize = this.value + "px";
+  document.getElementById('font-size-value').textContent = this.value + "px";
+  localStorage.setItem('fontSize', this.value);
+});
+
+// Reset settings
+function resetSettings() {
+  localStorage.clear();
+  alert('Settings reset! Reloading...');
+  location.reload();
+}
+</script>
+<!-- ...existing code... -->
+<footer style="background: #4787db; color: #fff; padding: 32px 0 0 0; margin-top: 60px; border-top-left-radius: 24px; border-top-right-radius: 24px;">
+  <div style="max-width: 1100px; margin: auto; padding: 0 24px;">
+    <div style="display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between; align-items: flex-start;">
+      <!-- Branding -->
+      <div style="flex: 1 1 180px; min-width: 180px;">
+        <h2 style="margin: 0 0 10px 0; font-size: 1.5em; letter-spacing: 2px;">My Travel Blog</h2>
+        <p style="margin: 0 0 12px 0;">Explore the world, one adventure at a time.</p>
+        <!-- Quick Accessibility -->
+<button onclick="navigateSection('travelife')" style="background:#fff;color:#4787db;border:none;border-radius:8px;padding:7px 18px;cursor:pointer;font-weight:bold;box-shadow:0 1px 4px #4787db33; font-size:0.95em; margin-bottom:8px;">
+  🌟 TraveLife
+</button>
+        <br>
+<span id="last-updated" style="font-size:0.95em;opacity:0.7;"></span>
+      </div>
+      <!-- Site Navigation -->
+      <nav aria-label="Footer Navigation" style="flex: 1 1 140px; min-width: 140px;">
+        <h3 style="margin: 0 0 10px 0; font-size: 1.1em;">Navigation</h3>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          <li><a href="#" onclick="navigateSection('home');return false;" style="color: #fff; text-decoration: underline;">Home</a></li>
+          <li><a href="#" onclick="navigateSection('destinations');return false;" style="color: #fff; text-decoration: underline;">Destinations</a></li>
+          <li><a href="#" onclick="navigateSection('tips');return false;" style="color: #fff; text-decoration: underline;">Tips</a></li>
+          <li><a href="#" onclick="navigateSection('experiences');return false;" style="color: #fff; text-decoration: underline;">Experiences</a></li>
+        </ul>
+        <div style="margin-top:18px;">
+          <button onclick="window.scrollTo({top:0,behavior:'smooth'});" style="background:#fff;color:#4787db;border:none;border-radius:8px;padding:7px 18px;cursor:pointer;font-weight:bold;box-shadow:0 1px 4px #4787db33;">
+            ⬆️ Back to Top
+          </button>
+        </div>
+      </nav>
+      <!-- Legal -->
+      <div style="flex: 1 1 140px; min-width: 140px;">
+        <h3 style="margin: 0 0 10px 0; font-size: 1.1em;">Legal</h3>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          <li><a href="privacy-policy.html" style="color: #fff; text-decoration: underline;">Privacy Policy</a></li>
+          <li><a href="terms-of-service.html" style="color: #fff; text-decoration: underline;">Terms of Service</a></li>
+        </ul>
+        <div style="margin-top:18px;">
+          <a href="mailto:admin@travelblog.com" style="color:#fff;text-decoration:underline;font-size:0.98em;">admin@travelblog.com</a>
+        </div>
+      </div>
+      <!-- Contact & CTA -->
+      <div style="flex: 1 1 220px; min-width: 200px;">
+        <h3 style="margin: 0 0 10px 0; font-size: 1.1em;">Contact &amp; Connect</h3>
+        <div style="margin-bottom: 14px;">
+          <button onclick="openContactModal()" style="background:#fff;color:#4787db;border:none;border-radius:8px;padding:7px 18px;cursor:pointer;font-weight:bold;box-shadow:0 1px 4px #4787db33;margin-bottom:8px;">
+            📧 Contact Us
+          </button>
+        </div>
+        <p style="margin: 0 0 10px 0;">Follow us for updates and inspiration:</p>
+        <div style="display: flex; gap: 14px; margin-bottom: 10px;">
+          <a href="https://facebook.com" aria-label="Facebook" style="color: #fff; background:#4267B2; border-radius:50%; width:38px; height:38px; display:flex; align-items:center; justify-content:center; font-size:1.4em; transition:background 0.2s;">
+            <svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.495v-9.294H9.691v-3.622h3.129V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0"/></svg>
+          </a>
+          <a href="https://twitter.com" aria-label="Twitter" style="color: #fff; background:#1da1f2; border-radius:50%; width:38px; height:38px; display:flex; align-items:center; justify-content:center; font-size:1.4em; transition:background 0.2s;">
+            <svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M24 4.557a9.93 9.93 0 0 1-2.828.775 4.932 4.932 0 0 0 2.165-2.724c-.951.564-2.005.974-3.127 1.195a4.916 4.916 0 0 0-8.38 4.482C7.691 8.095 4.066 6.13 1.64 3.161c-.542.929-.856 2.01-.857 3.17 0 2.188 1.115 4.116 2.823 5.247a4.904 4.904 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.936 4.936 0 0 1-2.224.084c.627 1.956 2.444 3.377 4.6 3.417A9.867 9.867 0 0 1 0 21.543a13.94 13.94 0 0 0 7.548 2.209c9.058 0 14.009-7.496 14.009-13.986 0-.213-.005-.425-.014-.636A10.012 10.012 0 0 0 24 4.557z"/></svg>
+          </a>
+          <a href="https://instagram.com" aria-label="Instagram" style="color: #fff; background:#e4405f; border-radius:50%; width:38px; height:38px; display:flex; align-items:center; justify-content:center; font-size:1.4em; transition:background 0.2s;">
+            <svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.974.974 1.246 2.241 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.974.974-2.241 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.974-.974-1.246-2.241-1.308-3.608C2.175 15.647 2.163 15.267 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.974-.974 2.241-1.246 3.608-1.308C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.072 5.771.131 4.659.363 3.678 1.344c-.98.98-1.213 2.092-1.272 3.373C2.013 5.668 2 6.077 2 12c0 5.923.013 6.332.072 7.613.059 1.281.292 2.393 1.272 3.373.981.981 2.093 1.213 3.373 1.272C8.332 23.987 8.741 24 12 24s3.668-.013 4.948-.072c1.281-.059 2.393-.292 3.373-1.272.981-.98 1.213-2.092 1.272-3.373.059-1.281.072-1.69.072-7.613 0-5.923-.013-6.332-.072-7.613-.059-1.281-.292-2.393-1.272-3.373-.98-.981-2.092-1.213-3.373-1.272C15.668.013 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </a>
+        </div>
+        <div style="margin-top:18px;">
+          <span style="font-size:0.98em;opacity:0.8;">Join our newsletter for exclusive tips!</span>
+          <br>
+          <a href="#" onclick="openNewsletterModal();return false;" style="background: linear-gradient(90deg,#4787db,#35b8e0); color: #fff; padding: 8px 22px; border-radius: 8px; font-weight: bold; text-decoration: none; box-shadow:0 1px 4px #4787db33; font-size:1em; margin-top:8px; display:inline-block;">
+            📬 Subscribe To TraveLife
+          </a>
+        </div>
+   
+      </div>
+    </div>
+    <hr style="border: none; border-top: 1px solid #fff3; margin: 32px 0 12px 0;">
+    <div style="text-align: center; font-size: 0.95em; padding-bottom: 16px;">
+      &copy; 2025 My Travel Blog &mdash; All rights reserved.
+      <span style="margin-left:18px;opacity:0.7;">Made with ❤️ by Doreen Baker Tamale</span>
+    </div>
+  </div>
+</footer>
+<!-- ...existing code... -->
+<div id="newsletter-modal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:#0008;z-index:9999;align-items:center;justify-content:center;">
+  <div style="background:#fff;color:#222;padding:32px 24px;border-radius:12px;max-width:400px;margin:auto;position:relative;">
+    <button onclick="closeNewsletterModal()" style="position:absolute;top:10px;right:14px;background:none;border:none;font-size:1.5em;cursor:pointer;">&times;</button>
+    <h3 style="color:#4787db;">Subscribe to Our TraveLife.</h3>
+    <form id="newsletter-form" onsubmit="return subscribeMember();">
+      <input id="newsletter-email" type="email" required placeholder="Your email address" style="padding:10px 12px;border-radius:6px;border:1px solid #ccc;width:60%;max-width:260px;">
+      <button type="submit" style="background:#4787db;color:#fff;padding:10px 18px;border:none;border-radius:6px;font-weight:bold;cursor:pointer;margin-left:8px;">Subscribe</button>
+    </form>
+    <p style="font-size:0.95em;color:#444;margin-top:12px;">No spam. Unsubscribe anytime.</p>
+    <div id="member-message" style="display:none; margin-top:18px; color:#4787db; font-weight:bold; font-size:1.1em;">
+      🎉 Thank you for subscribing to TraveLife! You are now a member.
+    </div>
+  </div>
+</div>
+<script>
+  function openNewsletterModal() {
+    document.getElementById('newsletter-modal').style.display = 'flex';
+    document.getElementById('newsletter-form').style.display = '';
+    document.getElementById('member-message').style.display = 'none';
+    document.getElementById('newsletter-email').value = '';
+  }
+  function closeNewsletterModal() {
+    document.getElementById('newsletter-modal').style.display = 'none';
+  }
+  function subscribeMember() {
+    document.getElementById('newsletter-form').style.display = 'none';
+    document.getElementById('member-message').style.display = '';
+    localStorage.setItem('isMember', 'true');
+    setTimeout(function() {
+      closeNewsletterModal();
+      updateMemberUI();
+    }, 2000);
+    return false;
+  }
+  function openContactModal() {
+  document.getElementById('contact-modal').style.display = 'flex';
+  document.getElementById('contact-success').style.display = 'none';
+}
+function closeContactModal() {
+  document.getElementById('contact-modal').style.display = 'none';
+}
+function contactSubmit() {
+  document.querySelector('#contact-modal form').style.display = 'none';
+  document.getElementById('contact-success').style.display = '';
+  setTimeout(function() {
+    closeContactModal();
+    document.querySelector('#contact-modal form').style.display = '';
+  }, 2000);
+}
+const translations = {
+  en: {
+    nickname: "Nickname",
+    bio: "Bio",
+    save: "Save",
+    profile_complete: "Profile Completeness",
+    language: "Language",
+    font: "Font",
+    theme: "Theme",
+    accent: "Accent Color",
+    fontsize: "Font Size",
+    darkmode: "Dark Mode",
+    reset: "Reset to Default",
+    logout: "Log Out"
+  },
+  es: {
+    nickname: "Apodo",
+    bio: "Biografía",
+    save: "Guardar",
+    profile_complete: "Completitud de Perfil",
+    language: "Idioma",
+    font: "Fuente",
+    theme: "Tema",
+    accent: "Color de Acento",
+    fontsize: "Tamaño de Fuente",
+    darkmode: "Modo Oscuro",
+    reset: "Restablecer",
+    logout: "Cerrar sesión"
+  },
+  fr: {
+    nickname: "Surnom",
+    bio: "Bio",
+    save: "Enregistrer",
+    profile_complete: "Profil Complet",
+    language: "Langue",
+    font: "Police",
+    theme: "Thème",
+    accent: "Couleur d’accent",
+    fontsize: "Taille de police",
+    darkmode: "Mode sombre",
+    reset: "Réinitialiser",
+    logout: "Déconnexion"
+  },
+  de: {
+    nickname: "Spitzname",
+    bio: "Bio",
+    save: "Speichern",
+    profile_complete: "Profil-Vervollständigung",
+    language: "Sprache",
+    font: "Schriftart",
+    theme: "Thema",
+    accent: "Akzentfarbe",
+    fontsize: "Schriftgröße",
+    darkmode: "Dunkler Modus",
+    reset: "Zurücksetzen",
+    logout: "Abmelden"
+  }
+};
+
+function setLanguage(lang) {
+  localStorage.setItem('language', lang);
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[lang] && translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+}
+
+// On language change
+document.getElementById('language-select').addEventListener('change', function() {
+  setLanguage(this.value);
+  alert('Language changed!');
+});
+
+// On page load, set language
+window.addEventListener('DOMContentLoaded', function() {
+  const lang = localStorage.getItem('language') || 'en';
+  setLanguage(lang);
+  document.getElementById('language-select').value = lang;
+});
+
+</script>
+<div id="contact-modal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:#0008;z-index:9999;align-items:center;justify-content:center;">
+  <div style="background:#fff;color:#222;padding:38px 32px 28px 32px;border-radius:22px;max-width:480px;margin:auto;position:relative;box-shadow:0 8px 32px #4787db44;max-height:90vh;overflow-y:auto;">
+    <button onclick="closeContactModal()" style="position:absolute;top:10px;right:14px;background:none;border:none;font-size:1.7em;cursor:pointer;color:#4787db;">&times;</button>
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:10px;">
+      <img src="https://ui-avatars.com/api/?name=Support&background=4787db&color=fff&rounded=true&size=48" alt="Support" style="width:48px;height:48px;border-radius:50%;border:2px solid #4787db;">
+      <h3 style="color:#4787db;margin:0;letter-spacing:1px;">Contact Us</h3>
+    </div>
+    <p style="font-size:1.08em;color:#4787dbb0;margin-bottom:18px;">
+      We'd love to hear from you! Fill out the form or reach us on social media.<br>
+      <span style="color:#2ecc40;font-size:0.98em;">Now with rating and instant preview!</span>
+    </p>
+ <form id="contact-form" onsubmit="contactSubmit();return false;" style="display:flex;flex-direction:column;gap:12px;">
+  <input type="text" id="contact-name" required placeholder="Your name" style="padding:12px 14px;border-radius:8px;border:1.5px solid #4787db77;width:100%;font-size:1em;">
+  <input type="email" id="contact-email" required placeholder="Your email" style="padding:12px 14px;border-radius:8px;border:1.5px solid #4787db77;width:100%;font-size:1em;">
+  <textarea id="contact-message" required placeholder="Your message" style="padding:12px 14px;border-radius:8px;border:1.5px solid #4787db77;width:100%;height:80px;font-size:1em;"></textarea>
+  <!-- Rating -->
+  <label style="font-size:0.98em;color:#4787db;">
+    <span>⭐ Rate your experience:</span>
+    <span id="contact-rating-stars" style="margin-left:8px;">
+      <span onclick="setContactRating(1)" style="cursor:pointer;">☆</span>
+      <span onclick="setContactRating(2)" style="cursor:pointer;">☆</span>
+      <span onclick="setContactRating(3)" style="cursor:pointer;">☆</span>
+      <span onclick="setContactRating(4)" style="cursor:pointer;">☆</span>
+      <span onclick="setContactRating(5)" style="cursor:pointer;">☆</span>
+    </span>
+  </label>
+  <div style="display:flex;align-items:center;gap:10px;">
+    <label style="font-size:0.98em;color:#4787db;">
+      <input type="checkbox" id="contact-newsletter" style="margin-right:6px;"> Subscribe to TraveLife
+    </label>
+    <label style="font-size:0.98em;color:#4787db;">
+      <input type="checkbox" id="contact-copy" style="margin-right:6px;"> Send me a copy
+    </label>
+  </div>
+  <button type="submit" style="background:linear-gradient(90deg,#4787db,#35b8e0);color:#fff;padding:12px 0;border:none;border-radius:8px;font-weight:bold;cursor:pointer;font-size:1.1em;box-shadow:0 1px 6px #4787db33;margin-top:8px;">
+    ✉️ Send Message
+  </button>
+</form>
+    <div id="contact-success" style="display:none; margin-top:18px; color:#4787db; font-weight:bold; font-size:1.1em;">
+      ✅ Thank you for your message! We'll get back to you soon.
+    </div>
+    <hr style="margin:22px 0 10px 0;border:none;border-top:1px solid #4787db22;">
+    <div style="text-align:center;">
+      <span style="font-size:1.05em;color:#4787dbb0;">Or connect with us:</span>
+      <div style="display:flex;justify-content:center;gap:18px;margin-top:10px;">
+        <a href="https://whatsapp.com" target="_blank" title="Whatsapp" style="color:#096621;font-size:1.5em;"><span>📧</span></a>
+        <a href="https://facebook.com" target="_blank" title="Facebook" style="color:#4267B2;font-size:1.5em;"><span>📘</span></a>
+        <a href="https://twitter.com" target="_blank" title="Twitter" style="color:#01080c;font-size:1.5em;"><span>🐦</span></a>
+        <a href="https://instagram.com" target="_blank" title="Instagram" style="color:#e4405f;font-size:1.5em;"><span>📸</span></a>
+        <a href="tel:+1234567890" title="Call us" style="color:#011d18;font-size:1.5em;"><span>📞</span></a>
+      </div>
+      <div style="margin-top:12px;font-size:0.98em;color:#4787dbb0;">
+        Response time: <b>within 24 hours</b>
+      </div>
+      <div style="margin-top:6px;font-size:0.95em;color:#170a8699;">
+        Your info is safe & confidential.
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+// Contact modal rating stars logic
+let contactRating = 0;
+function setContactRating(rating) {
+  contactRating = rating;
+  const stars = document.querySelectorAll('#contact-rating-stars span');
+  stars.forEach((star, i) => {
+    star.textContent = i < rating ? '★' : '☆';
+    star.style.color = i < rating ? '#FFD700' : '#4787db';
+  });
+}
+
+// Contact modal preview logic
+function showContactPreview() {
+  const name = document.getElementById('contact-name').value;
+  const email = document.getElementById('contact-email').value;
+  const message = document.getElementById('contact-message').value;
+  const rating = contactRating ? `${contactRating} star(s)` : 'Not rated';
+  document.getElementById('contact-preview').style.display = 'block';
+  document.getElementById('contact-preview').innerHTML =
+    `<b>Name:</b> ${name}<br>
+     <b>Email:</b> ${email}<br>
+     <b>Message:</b> ${message}<br>
+     <b>Rating:</b> ${rating}`;
+}
+
+// Enhanced contactSubmit for new features
+function contactSubmit() {
+  document.getElementById('contact-form').style.display = 'none';
+  document.getElementById('contact-success').style.display = '';
+  setTimeout(function() {
+    closeContactModal();
+    document.getElementById('contact-form').reset();
+    document.getElementById('contact-form').style.display = '';
+    document.getElementById('contact-success').style.display = 'none';
+    document.getElementById('contact-preview').style.display = 'none';
+    setContactRating(0);
+  }, 2200);
+}
+</script>
+<script>
+  // Set last updated date in the footer
+  document.addEventListener('DOMContentLoaded', function() {
+    // Use the document's last modified date
+    const updated = new Date(document.lastModified);
+    // Format as "Last updated: Month Day, Year, HH:MM"
+    
+    const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+    document.getElementById('last-updated').textContent =
+      "Last updated: " + updated.toLocaleDateString(undefined, options);
+  });
+
+</script>
+</body>
+</html>

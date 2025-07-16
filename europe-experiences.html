@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Europe Experiences | My Travel Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            min-height: 100vh;
+        }
+        nav {
+            background: rgba(71, 135, 219, 0.95);
+            color: #fff;
+            padding: 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(71,135,219,0.08);
+        }
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav button {
+            background: none;
+            color: #fff;
+            border: none;
+            margin: 0;
+            padding: 22px 48px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 0;
+            cursor: pointer;
+            letter-spacing: 2px;
+            transition: background 0.2s, color 0.2s;
+        }
+        nav button.active, nav button:hover {
+            background: #b2d8b2;
+            color: #333;
+        }
+        .hero {
+            background: url('https://media.istockphoto.com/id/175116449/photo/travel-in-europe-background.jpg?s=612x612&w=0&k=20&c=39KaNtddgR5zZJ9DKgxwMIU-w1dp2EqQ72RiIeN1MlU=') center/cover no-repeat;
+            min-height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            text-shadow: 0 4px 24px #0008;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            margin-bottom: 40px;
+        }
+        .hero h1 {
+            font-size: 2em;
+            margin: 0 0 10px 0;
+            letter-spacing: 4px;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.1em;
+            margin: 0;
+            font-weight: 400;
+        }
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 40px 30px;
+        }
+        h2 {
+            color: #4787db;
+            margin-top: 0;
+            font-size: 2em;
+        }
+        .exp-list {
+            font-size: 1.1em;
+            color: #444;
+            line-height: 1.7;
+            list-style: disc inside;
+        }
+        @media (max-width: 700px) {
+            .hero h1 { font-size: 1.3em; }
+            .hero p { font-size: 1em; }
+            main { padding: 18px 6vw; }
+            nav button { padding: 14px 10px; font-size: 1em; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <button onclick="location.href='starr.html'">Home</button>
+            <button onclick="location.href='starr.html#destinations'">Destinations</button>
+            <button onclick="location.href='starr.html#tips'">Tips</button>
+            <button class="active">Experiences</button>
+            <button onclick="history.back()" style="margin-left:30px;">&#8592; Back</button>
+        </div>
+    </nav>
+    <div class="hero">
+        <h1>Europe Experiences</h1>
+        <p>Historic cities, art, and countryside adventures.</p>
+    </div>
+    <main>
+        <h2>Unforgettable Experiences in Europe by Region</h2>
+        <ul class="exp-list">
+            <li>
+                <strong>Southern Europe:</strong>
+                Savoring tapas in Barcelona (Spain), gondola rides in Venice (Italy), and exploring the Acropolis in Athens (Greece).
+            </li>
+            <li>
+                <strong>Western Europe:</strong>
+                Climbing the Eiffel Tower in Paris (France), cycling through Amsterdam’s canals (Netherlands), and enjoying Belgian chocolate in Brussels.
+            </li>
+            <li>
+                <strong>Eastern Europe:</strong>
+                Touring Prague Castle (Czech Republic), relaxing in Budapest’s thermal baths (Hungary), and discovering Kraków’s Old Town (Poland).
+            </li>
+            <li>
+                <strong>Northern Europe:</strong>
+                Cruising Norway’s fjords, chasing the Northern Lights in Swedish Lapland, and exploring Viking history in Copenhagen (Denmark).
+            </li>
+            <li>
+                <strong>Central Europe:</strong>
+                Hiking in the Swiss Alps (Switzerland), wandering Vienna’s imperial palaces (Austria), and tasting Bavarian pretzels at Munich’s Oktoberfest (Germany).
+            </li>
+        </ul>
+    </main>
+</body>
+</html>

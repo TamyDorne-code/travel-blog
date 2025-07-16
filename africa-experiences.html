@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Africa Experiences | My Travel Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { margin: 0; font-family: 'Segoe UI', Arial, sans-serif; background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%); min-height: 100vh;}
+        nav { background: rgba(71, 135, 219, 0.95); color: #fff; padding: 0; text-align: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(71,135,219,0.08);}
+        .nav-container { display: flex; justify-content: center; align-items: center;}
+        nav button { background: none; color: #fff; border: none; margin: 0; padding: 22px 48px; font-size: 1.2em; font-weight: bold; border-radius: 0; cursor: pointer; letter-spacing: 2px; transition: background 0.2s, color 0.2s;}
+        nav button.active, nav button:hover { background: #b2d8b2; color: #333;}
+        .hero { background: url('https://static.toiimg.com/photo/62650322.cms') center/cover no-repeat; min-height: 220px; display: flex; align-items: center; justify-content: center; flex-direction: column; color: #fff; text-shadow: 0 4px 24px #0008; border-bottom-left-radius: 40px; border-bottom-right-radius: 40px; margin-bottom: 40px;}
+        .hero h1 { font-size: 2em; margin: 0 0 10px 0; letter-spacing: 4px; font-weight: bold;}
+        .hero p { font-size: 1.1em; margin: 0; font-weight: 400;}
+        main { max-width: 900px; margin: 40px auto; background: #fff; border-radius: 18px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); padding: 40px 30px;}
+        h2 { color: #4787db; margin-top: 0; font-size: 2em;}
+        .region-section { margin-bottom: 40px; }
+        .experiences-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-top: 18px;
+        }
+        .experience-card {
+            background: #f7f7f7;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(71,135,219,0.07);
+            padding: 22px 18px;
+            flex: 1 1 260px;
+            min-width: 220px;
+            max-width: 300px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 0;
+        }
+        .experience-card h3 {
+            margin: 0 0 10px 0;
+            color: #4787db;
+            font-size: 1.15em;
+        }
+        .experience-card p {
+            margin: 0;
+            color: #444;
+            font-size: 1em;
+        }
+        @media (max-width: 900px) {
+            .experiences-grid {
+                gap: 16px;
+            }
+            .experience-card {
+                min-width: 160px;
+                max-width: 100%;
+            }
+        }
+        @media (max-width: 700px) {
+            .experiences-grid {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .experience-card {
+                width: 100%;
+                min-width: unset;
+            }
+            .hero h1 { font-size: 1.3em; }
+            .hero p { font-size: 1em; }
+            main { padding: 18px 6vw; }
+            nav button { padding: 14px 10px; font-size: 1em; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <button onclick="location.href='africa.html'">Destinations</button>
+            <button onclick="location.href='africa-tips.html'">Tips</button>
+            <button class="active">Experiences</button>
+            <button onclick="history.back()" style="margin-left:30px;">&#8592; Back</button>
+        </div>
+    </nav>
+    <div class="hero">
+        <h1>Africa Experiences</h1>
+        <p>Discover unique adventures in every region of Africa.</p>
+    </div>
+    <main>
+        <div class="region-section">
+            <h2>East Africa</h2>
+            <div class="experiences-grid">
+                <div class="experience-card">
+                    <h3>Safari in Serengeti (Tanzania)</h3>
+                    <p>Witness the Great Migration and see lions, elephants, and more in their natural habitat.</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Gorilla Trekking (Uganda and Rwanda)</h3>
+                    <p>Hike through lush forests to encounter endangered mountain gorillas up close.</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Maasai Culture (Kenya)</h3>
+                    <p>Visit Maasai villages and learn about their traditions and way of life.</p>
+                </div>
+                                <div class="experience-card">
+                    <h3>Volcanoes National Park (Rwanda)</h3>
+                    <p>You will see the the endangered mountain gorilla and an evergreen and bamboo forest. So many wonders. Dont forget to visit</p>
+                </div>
+                                <div class="experience-card">
+                    <h3>Zanzibar (Tanzania)</h3>
+                    <p>This place means exploring from the markets in Stone Town to exquisite tropical beaches and if you have time, this will be the perfect place for a vacation.</p>
+                </div>
+                                <div class="experience-card">
+                    <h3>Mountain Kenya (Kenya)</h3>
+                    <p>If you love hiking, this is the perfect place to show your skills.</p>
+                </div>
+            </div>
+        </div>
+        <div class="region-section">
+            <h2>West Africa</h2>
+            <div class="experiences-grid">
+                <div class="experience-card">
+                    <h3>Slave Castles (Ghana)</h3>
+                    <p>Tour Cape Coast and Elmina Castles to learn about the region's history.</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Voodoo Festival (Benin)</h3>
+                    <p>Experience the vibrant annual Voodoo Festival in Ouidah.</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Lagos Nightlife (Nigeria)</h3>
+                    <p>Enjoy the music, food, and energy of Africa's largest city.</p>
+                </div>
+                                <div class="experience-card">
+                    <h3>Mole National Park (Ghana)</h3>
+                    <p>This is really a great place to see elephants, antelopes and various bird species in their natural habitat. Amazing!! </p>
+                </div>
+                                <div class="experience-card">
+                    <h3>Abomey (Benin)</h3>
+                    <p>Explore the Royal Palaces of Abomey, a UNESCO World Heritage site, and learn about the powerful kingdom of Dahomey.</p>
+                </div>
+                                <div class="experience-card">
+                    <h3>Cap Skirring (Senegal)</h3>
+                    <p>Relax on the powdery sands of this idyllic beach. The sun is bright and there is nothing to worry about</p>
+                </div>
+            </div>
+        </div>
+        <div class="region-section">
+            <h2>North Africa</h2>
+            <div class="experiences-grid">
+                <div class="experience-card">
+                    <h3>Pyramids of Giza (Egypt)</h3>
+                    <p>Marvel at the ancient pyramids and the Sphinx, wonders of the ancient world.</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Sahara Desert (Morocco)</h3>
+                    <p>Ride camels and camp under the stars in the vast Sahara dunes.</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Medina Exploration (Tunisia)</h3>
+                    <p>Wander the historic medinas and souks of Tunis and other cities.</p>
+                </div>
+                                <div class="experience-card">
+                    <h3>Tunis (Tunisia)</h3>
+                    <p>So many ancient Roman ruins and strong Islamic religion so show respect. What i loved about tunis are their markets. So much fresh food, street food is also a go-to solution and everything is good.</p>
+                </div>
+                                <div class="experience-card">
+                    <h3>Luxor (Egypt)</h3>
+                    <p>Luxor is amazing, ancient stuff and more but what intruged me was the nightlife. I would sit near the window of my hotel room and watch the dazzling lights so many cars and talk about food, grilled chicken, omelettes and salads were my favourite. But all in all i really enjoyed Luxor. </p>
+                </div>
+                                <div class="experience-card">
+                    <h3>Atlas Mountain (Algeria) </h3>
+                    <p>You can see this moutain in Morocco, Algeria and Tunisia. So if you visit one of these countries, make sure you take a glance at this mountain.</p>
+                </div>
+            </div>
+        </div>
+        <div class="region-section">
+            <h2>South Africa</h2>
+            <div class="experiences-grid">
+                <div class="experience-card">
+                    <h3>Table Mountain (South Africa)</h3>
+                    <p>Hike or take a cable car up Table Mountain for stunning views of Cape Town.</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Garden Route Road Trip</h3>
+                    <p>Drive along South Africa’s scenic Garden Route, stopping at beaches and forests.</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Winelands Tour</h3>
+                    <p>Sample world-class wines in the vineyards around Stellenbosch and Franschhoek.</p>
+                </div>
+                                <div class="experience-card">
+                    <h3>Cape Town</h3>
+                    <p>Amazing food and a stunning scenery.</p>
+                </div>
+                                <div class="experience-card">
+                    <h3>Boulders Beach</h3>
+                    <p>This place sometimes a bit chilly and it is a home for a colony of african penguins and trust me, this things are so adorable and friendly. </p>
+                </div>
+                                <div class="experience-card">
+                    <h3>Winelands Tour</h3>
+                    <p>Sample world-class wines in the vineyards around Stellenbosch and Franschhoek.</p>
+                </div>
+            </div>
+        </div>
+        <div class="region-section">
+            <h2>Central Africa</h2>
+            <div class="experiences-grid">
+                <div class="experience-card">
+                    <h3>Congo Rainforest Adventure</h3>
+                    <p>Explore the world’s second-largest rainforest and spot rare wildlife.</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Dzanga-Sangha Reserve (CAR)</h3>
+                    <p>See forest elephants, gorillas, and unique birdlife in this remote reserve.</p>
+                </div>
+                <div class="experience-card">
+                    <h3>River Cruise (Congo River)</h3>
+                    <p>Take a boat trip on the mighty Congo River for a unique perspective of Central Africa.</p>
+                </div>
+                                <div class="experience-card">
+                    <h3>Chutes de Baoli (Baoli Waterfalls)</h3>
+                    <p>If you go during the rainy season, I assure you that it'll be more impressive. I hiked the base (worth it), swam in the natural pools (relaxing) and I really enjoyed the scenic beauty.</p>
+                </div>
+                                <div class="experience-card">
+                    <h3>Notre-Dame of Bangui Cathedral</h3>
+                    <p>A beautiful church that's worth a place to pray and it's beautiful architecture and historical significance</p>
+                </div>
+                                <div class="experience-card">
+                    <h3>Oubangui River</h3>
+                    <p>Enjoy a relaxing time by this river by perhaps with a BBQ and soda or take a boeat tour to experience the city from a different perspective</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

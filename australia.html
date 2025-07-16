@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Australia Destinations | My Travel Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { margin: 0; font-family: 'Segoe UI', Arial, sans-serif; background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%); min-height: 100vh;}
+        nav { background: rgba(71, 135, 219, 0.95); color: #fff; padding: 0; text-align: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(71,135,219,0.08);}
+        .nav-container { display: flex; justify-content: center; align-items: center;}
+        nav button { background: none; color: #fff; border: none; margin: 0; padding: 22px 48px; font-size: 1.2em; font-weight: bold; border-radius: 0; cursor: pointer; letter-spacing: 2px; transition: background 0.2s, color 0.2s;}
+        nav button.active, nav button:hover { background: #b2d8b2; color: #333;}
+        .hero { background: url('https://karlobag.eu/images/upload/1024px-71gln.jpg') center/cover no-repeat; min-height: 220px; display: flex; align-items: center; justify-content: center; flex-direction: column; color: #fff; text-shadow: 0 4px 24px #0008; border-bottom-left-radius: 40px; border-bottom-right-radius: 40px; margin-bottom: 40px;}
+        .hero h1 { font-size: 2em; margin: 0 0 10px 0; letter-spacing: 4px; font-weight: bold;}
+        .hero p { font-size: 1.1em; margin: 0; font-weight: 400;}
+        main { max-width: 900px; margin: 40px auto; background: #fff; border-radius: 18px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); padding: 40px 30px;}
+        h2 { color: #4787db; margin-top: 0; font-size: 2em;}
+        .card-grid { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 30px;}
+        .card { background: #f7f7f7; border-radius: 14px; box-shadow: 0 2px 12px rgba(71,135,219,0.07); overflow: hidden; width: 260px; flex: 1 1 260px; min-width: 220px; max-width: 100%; display: flex; flex-direction: column;}
+        .card img { width: 100%; height: 160px; object-fit: cover;}
+        .card-content { padding: 18px 16px 14px 16px;}
+        .card-content h3 { margin: 0 0 8px 0; color: #4787db; font-size: 1.2em;}
+        .card-content p { margin: 0; color: #444; font-size: 1em;}
+        @media (max-width: 700px) { .hero h1 { font-size: 1.3em; } .hero p { font-size: 1em; } main { padding: 18px 6vw; } .card-grid { flex-direction: column; gap: 18px; } .card { width: 100%; min-width: unset; } nav button { padding: 14px 10px; font-size: 1em; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <button class="active">Australia</button>
+            <button onclick="history.back()" style="margin-left:30px;">&#8592; Back</button>
+        </div>
+    </nav>
+    <div class="hero">
+        <h1>Australia Destinations</h1>
+        <p>Beaches, cities, and the outback.</p>
+    </div>
+    <main>
+        <h2>Top Places to Visit in Australia</h2>
+        <div class="card-grid">
+            <div class="card">
+                <img src="https://www.virginaustralia.com/content/dam/vaa/img/destinations/sydney/where-to-stay/Where-to-stay-in-Sydney-darling-harbour-and-pyrmont.jpg/_jcr_content/renditions/vaacore.web.720.0.jpg" alt="Sydney">
+                <div class="card-content">
+                    <h3>Sydney</h3>
+                    <p>Opera House, Harbour Bridge, and Bondi Beach.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://www.pelago.com/img/products/AU-Australia/great-barrier-reef-tour/1011-0248_great-barrier-reef-tour-australia-pelago1..jpg" alt="Great Barrier Reef">
+                <div class="card-content">
+                    <h3>Great Barrier Reef</h3>
+                    <p>Snorkeling, diving, and vibrant marine life.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://cdn.prod.website-files.com/5f2a4e529009d52daf5cd0df/67658876e3b529b5fcf247e9_shutterstock_2277234317.webp" alt="Uluru">
+                <div class="card-content">
+                    <h3>Uluru</h3>
+                    <p>Iconic red rock and Aboriginal culture in the outback.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://www.rmit.edu.au/content/dam/rmit/au/en/news/news_Melbourne_AdobeStock.jpg" alt="Melbourne">
+                <div class="card-content">
+                    <h3>Melbourne</h3>
+                    <p>Cultural capital with art, food, and coffee.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://teq.queensland.com/au/en/industry/what-we-do/stakeholder-engagement/brisbane-region.thumb.800.480.png" alt="Brisbane">
+                <div class="card-content">
+                    <h3>Brisbane</h3>
+                    <p>River city with parks, museums, and nightlife.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://a.travel-assets.com/findyours-php/viewfinder/images/res70/499000/499351-western-australia.jpg" alt="Perth">
+                <div class="card-content">
+                    <h3>Perth</h3>
+                    <p>Beautiful beaches, parks, and vibrant city life.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://www.aurecongroup.com/-/media/images/aurecon/content/insights/evolution-adelaide-riverbank-precinct/adelaide-riverbank-precinct-hero-banner.jpg?as=0&w=824" alt="Adelaide">
+                <div class="card-content">
+                    <h3>Adelaide</h3>
+                    <p>Wine regions, festivals, and cultural experiences.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://i.guim.co.uk/img/media/fc7fd6ca8228d666efb528b5117a76bdf53ccdd6/739_968_4927_2957/master/4927.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=51cdb423d5153bd2e64bbf13e78b97b8" alt="Gold Coast">
+                <div class="card-content">
+                    <h3>Gold Coast</h3>
+                    <p>Surfing beaches, theme parks and carnivals.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://pacifichotelcairns.com.au/wp-content/uploads/2023/05/PHC-Website-images-6-1500x625.png" alt="Cairns">
+                <div class="card-content">
+                    <h3>Cairns</h3>
+                    <p>Gateway to the Great Barrier Reef and tropical rainforests.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://www.planetware.com/photos-large/NZ/new-zealand-queenstown-skyline-gondola.jpg" alt="Queenstown">
+                <div class="card-content">
+                    <h3>Queenstown</h3>
+                    <p>Adventure capital with skiing, bungee jumping, and stunning lakes.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://holmesanz.com/wp-content/uploads/Christchurch-Cathedral-1-scaled.jpg" alt="Christchurch">
+                <div class="card-content">
+                    <h3>Christchurch</h3>
+                    <p>Garden city with parks, museums, and a vibrant arts scene.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://hakatours.com/blog/wp-content/uploads/2017/03/wellington-2144119_1920.jpg" alt="Wellington">
+                <div class="card-content">
+                    <h3>Wellington</h3>
+                    <p>Capital city with a vibrant arts scene and beautiful harbor.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

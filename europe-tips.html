@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Europe Travel Tips | My Travel Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            min-height: 100vh;
+        }
+        nav {
+            background: rgba(71, 135, 219, 0.95);
+            color: #fff;
+            padding: 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(71,135,219,0.08);
+        }
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav button {
+            background: none;
+            color: #fff;
+            border: none;
+            margin: 0;
+            padding: 22px 48px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 0;
+            cursor: pointer;
+            letter-spacing: 2px;
+            transition: background 0.2s, color 0.2s;
+        }
+        nav button.active, nav button:hover {
+            background: #b2d8b2;
+            color: #333;
+        }
+        .hero {
+            background: url('https://m.media-amazon.com/images/I/71rJsUXa3-L._AC_UF894,1000_QL80_.jpg') center/cover no-repeat;
+            min-height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            text-shadow: 0 4px 24px #0008;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            margin-bottom: 40px;
+        }
+        .hero h1 {
+            font-size: 2em;
+            margin: 0 0 10px 0;
+            letter-spacing: 4px;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.1em;
+            margin: 0;
+            font-weight: 400;
+        }
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 40px 30px;
+        }
+        h2 {
+            color: #4787db;
+            margin-top: 0;
+            font-size: 2em;
+        }
+        .tips-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-top: 24px;
+        }
+        .tip-card {
+            background: #f7f7f7;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(71,135,219,0.07);
+            padding: 22px 18px;
+            flex: 1 1 260px;
+            min-width: 220px;
+            max-width: 300px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 0;
+        }
+        .tip-card h3 {
+            margin: 0 0 10px 0;
+            color: #4787db;
+            font-size: 1.15em;
+        }
+        .tip-card p {
+            margin: 0;
+            color: #444;
+            font-size: 1em;
+        }
+        @media (max-width: 900px) {
+            .tips-grid {
+                gap: 16px;
+            }
+            .tip-card {
+                min-width: 160px;
+                max-width: 100%;
+            }
+        }
+        @media (max-width: 700px) {
+            .tips-grid {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .tip-card {
+                width: 100%;
+                min-width: unset;
+            }
+            .hero h1 { font-size: 1.3em; }
+            .hero p { font-size: 1em; }
+            main { padding: 18px 6vw; }
+            nav button { padding: 14px 10px; font-size: 1em; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <button onclick="location.href='starr.html'">Home</button>
+            <button onclick="location.href='starr.html#destinations'">Destinations</button>
+            <button class="active">Tips</button>
+            <button onclick="location.href='starr.html#experiences'">Experiences</button>
+            <button onclick="history.back()" style="margin-left:30px;">&#8592; Back</button>
+        </div>
+    </nav>
+    <div class="hero">
+        <h1>Europe Travel Tips</h1>
+        <p>Smart travel, culture, and comfort for Europe.</p>
+    </div>
+    <main>
+        <h2>Top Tips for Traveling in Europe</h2>
+        <div class="tips-grid">
+            <div class="tip-card">
+                <h3>Clothes</h3>
+                <p>Pack layers for changing weather. Comfortable walking shoes are a must for cobblestone streets and sightseeing.</p>
+            </div>
+            <div class="tip-card">
+                <h3>Transport</h3>
+                <p>Use trains and public transport for convenience and savings. Consider a rail pass for multi-country trips.</p>
+            </div>
+            <div class="tip-card">
+                <h3>Money</h3>
+                <p>Carry a credit card and some cash. Many places accept cards, but small shops and markets may not.</p>
+            </div>
+            <div class="tip-card">
+                <h3>Language</h3>
+                <p>Learn basic phrases in the local language. English is widely spoken, but locals appreciate your effort.</p>
+            </div>
+            <div class="tip-card">
+                <h3>Culture</h3>
+                <p>Respect local customs and traditions. Dress appropriately for churches and religious sites.</p>
+            </div>
+            <div class="tip-card">
+                <h3>Safety</h3>
+                <p>Watch out for pickpockets in tourist areas. Keep your valuables secure and be aware of your surroundings.</p>
+            </div>
+            <div class="tip-card">
+                <h3>Food</h3>
+                <p>Try local cuisine and visit markets for authentic flavors. Tipping is customary but not always required.</p>
+            </div>
+            <div class="tip-card">
+                <h3>Connectivity</h3>
+                <p>Get a local SIM card or eSIM for affordable data and maps. Free Wi-Fi is common in cafes and hotels.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

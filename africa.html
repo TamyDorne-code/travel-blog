@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Africa - Destinations | My Travel Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            min-height: 100vh;
+        }
+        nav {
+            background: rgba(71, 135, 219, 0.95);
+            color: #fff;
+            padding: 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(71,135,219,0.08);
+        }
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav button {
+            background: none;
+            color: #fff;
+            border: none;
+            margin: 0;
+            padding: 22px 48px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 0;
+            cursor: pointer;
+            letter-spacing: 2px;
+            transition: background 0.2s, color 0.2s;
+        }
+        nav button.active, nav button:hover {
+            background: #b2d8b2;
+            color: #333;
+        }
+        .hero {
+            background: url('https://www.thehabarinetwork.com/wp-content/uploads/2024/05/Africa-Tourism-Sector.jpg') center/cover no-repeat;
+            min-height: 260px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            text-shadow: 0 4px 24px #0008;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            margin-bottom: 40px;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            margin: 0 0 10px 0;
+            letter-spacing: 4px;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin: 0;
+            font-weight: 400;
+        }
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 40px 30px;
+        }
+        h2 {
+            color: #4787db;
+            margin-top: 0;
+            font-size: 2em;
+        }
+       .card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    margin-top: 30px;
+    justify-content: flex-start;
+}
+
+.card {
+    background: #f7f7f7;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(71,135,219,0.07);
+    overflow: hidden;
+    width: calc(33.333% - 19px); /* 3 in a row with gap */
+    min-width: 220px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 18px 16px 14px 16px;
+}
+
+@media (max-width: 1000px) {
+    .card {
+        width: calc(50% - 14px); /* 2 in a row on medium screens */
+    }
+}
+@media (max-width: 700px) {
+    .card-grid {
+        flex-direction: column;
+        gap: 18px;
+    }
+    .card {
+        width: 100%;
+        min-width: unset;
+    }
+    .hero h1 { font-size: 1.5em; }
+    .hero p { font-size: 1em; }
+    main { padding: 18px 6vw; }
+    nav button { padding: 14px 10px; font-size: 1em; }
+}
+/* ...existing code... */
+    </style>
+</head>
+<body>
+   <nav>
+    <div class="nav-container">
+        <button onclick="location.href='starr.html'">Home</button>
+        <button class="active">Destinations</button>
+        <button onclick="location.href='starr.html#tips'">Tips</button>
+        <button onclick="location.href='starr.html#experiences'">Experiences</button>
+        <button onclick="history.back()" style="margin-left:30px;">&#8592; Back</button>
+    </div>
+</nav>
+    <div class="hero">
+        <h1>Africa</h1>
+        <p>Safari adventures, pyramids, and vibrant cultures.</p>
+    </div>
+    <main>
+        <h2>Top Places to Visit in Africa</h2>
+        <div class="card-grid">
+            <div class="card">
+                <img src="https://cdn.sanity.io/images/y0jkjygh/production/45b41fb95aa0d2af2643fb32e4cd392bbbe9f588-992x663.jpg?w=3840&q=85&fit=clip&auto=format" alt="Serengeti">
+                <div class="card-content">
+                    <h3>Serengeti National Park, Tanzania</h3>
+                    <p>Witness the Great Migration and Africa's iconic wildlife.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://uploads.exoticca.com/global/destination/poi/cape-town.png" alt="Cape Town">
+                <div class="card-content">
+                    <h3>Cape Town, South Africa</h3>
+                    <p>Table Mountain, beaches, and vibrant city life.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://www.wendywutours.co.uk/resource/upload/2137/giza-ban.jpg.webp" alt="Pyramids">
+                <div class="card-content">
+                    <h3>Pyramids of Giza, Egypt</h3>
+                    <p>Marvel at ancient wonders and desert landscapes.</p>
+                </div>
+            </div>
+    
+                    <div class="card">
+                <img src="https://www.asiliaafrica.com/wp-content/uploads/2024/12/The-waterfall-of-Murchison-Falls-National-Park.jpg" alt="Murchison Falls">
+                <div class="card-content">
+                    <h3>Murchison Falls National Park, Uganda</h3>
+                    <p>Majestic waterfalls, diverse wildlife and the chance to spot the rare shoebill stork.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://media.istockphoto.com/id/1344634150/photo/old-fort-also-known-as-the-arab-fort-is-a-fortification-located-in-stone-town-in-zanzibar.jpg?s=612x612&w=0&k=20&c=OGd82RQCc8UFy2h2PzY664brKvtgOLifRsmcJ-8XF6w=" alt="Stone Town">
+                <div class="card-content">
+                    <h3>Stone Town, Zanzibar</h3>
+                    <p>Blending African, Indian, Arabian and European cultures.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://www.robertharding.com/watermark.php?type=preview&im=RM/RH/HORIZONTAL/860-288673" alt="Okavango Delta">
+                <div class="card-content">
+                    <h3>Okavango Delta, Botswana</h3>
+                    <p>A unique inland delta with rich wildlife and stunning landscapes.</p>
+             
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://www.dodogo.mu/wp-content/uploads/2025/03/best-time-to-visit-mauritius.jpeg" alt="Mauritius Island">
+                <div class="card-content">
+                    <h3>Mauritius Island </h3>
+                    <p>Pristine beaches, coral reefs, and lush landscapes.</p>
+              
+            </div>
+            </div>
+                        <div class="card">
+                <img src="https://media.audleytravel.com/-/media/images/home/north-africa-and-the-middle-east/morocco/places/istock_41519458_morocco_djemaa_el_fna_marrakesh_letterbox.jpg?q=79&w=1920&h=685" alt="Marrakesh City">
+                <div class="card-content">
+                    <h3>Marrakesh City, Morocco</h3>
+                    <p>History, Architecture, traditional culture and, of course, delicious food.</p>
+                </div>
+            </div>
+                                    <div class="card">
+                <img src="https://elitetraveler.com/wp-content/uploads/sites/8/2022/12/Namibia-Sossusvlei-Desert-Lodge-view-from-front-aerial-min-scaled.jpg" alt="Sossusvlei Desert">
+                <div class="card-content">
+                    <h3>Sossusvlei Desert, Namibia</h3>
+                    <p>Stunning red dunes and surreal landscapes.</p>
+            </div>
+            </div>
+                                    <div class="card">
+                <img src="https://selectadventuresafari.com/wp-content/uploads/2024/03/ngorongoro-crater-national-park-1.jpg" alt="Ngorongoro Crater">
+                <div class="card-content">
+                    <h3>Ngorongoro Crater, Tanzania</h3>
+                    <p>A UNESCO World Heritage site with diverse wildlife.</p>
+                </div>
+            </div>
+                                    <div class="card">
+                <img src="https://kissesfromafrica.com/wp-content/uploads/2023/09/Reunion_01.jpg" alt="Reunion Island">
+                <div class="card-content">
+                    <h3>Reunion Island</h3>
+                    <p>Active volcano and several mountains.</p>
+                </div>
+            </div>
+                                    <div class="card">
+                <img src="https://stujarvis.com/wp-content/uploads/2015/10/cnv00024-3.jpg" alt="Djenne Mosque">
+                <div class="card-content">
+                    <h3>Djenne Mosque, Mali</h3>
+                    <p>World's largest mud-brick structure and a UNESCO World Heritage site.</p>
+                </div>
+            </div>
+            </div>
+    </main>
+</body>
+</html>

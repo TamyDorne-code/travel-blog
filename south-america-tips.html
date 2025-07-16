@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>South America Travel Tips | My Travel Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            min-height: 100vh;
+        }
+        nav {
+            background: rgba(71, 135, 219, 0.95);
+            color: #fff;
+            padding: 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(71,135,219,0.08);
+        }
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav button {
+            background: none;
+            color: #fff;
+            border: none;
+            margin: 0;
+            padding: 22px 48px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 0;
+            cursor: pointer;
+            letter-spacing: 2px;
+            transition: background 0.2s, color 0.2s;
+        }
+        nav button.active, nav button:hover {
+            background: #b2d8b2;
+            color: #333;
+        }
+        .hero {
+            background: url('https://www.touripia.com/wp-content/uploads/2025/01/2-Days-and-2-Nights-in-Medellin-1.webp') center/cover no-repeat;
+            min-height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            text-shadow: 0 4px 24px #0008;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            margin-bottom: 40px;
+        }
+        .hero h1 {
+            font-size: 2em;
+            margin: 0 0 10px 0;
+            letter-spacing: 4px;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.1em;
+            margin: 0;
+            font-weight: 400;
+        }
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 40px 30px;
+        }
+        h2 {
+            color: #4787db;
+            margin-top: 0;
+            font-size: 2em;
+        }
+        .tips-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-top: 24px;
+        }
+        .tip-card {
+            background: #f7f7f7;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(71,135,219,0.07);
+            padding: 22px 18px;
+            flex: 1 1 260px;
+            min-width: 220px;
+            max-width: 300px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 0;
+        }
+        .tip-card h3 {
+            margin: 0 0 10px 0;
+            color: #4787db;
+            font-size: 1.15em;
+        }
+        .tip-card p {
+            margin: 0;
+            color: #444;
+            font-size: 1em;
+        }
+        @media (max-width: 900px) {
+            .tips-grid {
+                gap: 16px;
+            }
+            .tip-card {
+                min-width: 160px;
+                max-width: 100%;
+            }
+        }
+        @media (max-width: 700px) {
+            .tips-grid {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .tip-card {
+                width: 100%;
+                min-width: unset;
+            }
+            .hero h1 { font-size: 1.3em; }
+            .hero p { font-size: 1em; }
+            main { padding: 18px 6vw; }
+            nav button { padding: 14px 10px; font-size: 1em; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <button onclick="location.href='starr.html'">Home</button>
+            <button onclick="location.href='starr.html#destinations'">Destinations</button>
+            <button class="active">Tips</button>
+            <button onclick="location.href='starr.html#experiences'">Experiences</button>
+            <button onclick="history.back()" style="margin-left:30px;">&#8592; Back</button>
+        </div>
+    </nav>
+    <div class="hero">
+        <h1>South America Travel Tips</h1>
+        <p>Adventure, culture, and nature in South America.</p>
+    </div>
+    <main>
+        <h2>Top Tips for Traveling in South America</h2>
+        <div class="tips-grid">
+            <div class="tip-card">
+                <h3>Clothes</h3>
+                <p>Pack for diverse climates—bring layers for mountains and light clothes for tropical regions. A rain jacket is useful.</p>
+            </div>
+            <div class="tip-card">
+                <h3>Language</h3>
+                <p>Spanish and Portuguese are widely spoken. Learn basic phrases or use a translation app for easier communication.</p>
+            </div>
+            <div class="tip-card">
+                <h3>Money</h3>
+                <p>Carry cash in small bills. ATMs are common in cities, but less so in rural areas. Credit cards may not be accepted everywhere.</p>
+            </div>
+            <div class="tip-card">
+                <h3>Transport</h3>
+                <p>Long-distance buses are popular and affordable. Domestic flights save time for large distances.</p>
+            </div>
+            <div class="tip-card">
+                <h3>Health</h3>
+                <p>Check vaccination requirements. Use insect repellent and drink bottled or filtered water to avoid illness.</p>
+            </div>
+            <div class="tip-card">
+                <h3>Safety</h3>
+                <p>Be aware of your surroundings, especially in crowded places. Use official taxis and avoid displaying valuables.</p>
+            </div>
+            <div class="tip-card">
+                <h3>Nature</h3>
+                <p>Respect wildlife and natural sites. Book tours with reputable operators for activities like trekking or Amazon visits.</p>
+            </div>
+            <div class="tip-card">
+                <h3>Food</h3>
+                <p>Try local dishes and fresh fruits. Eat at busy places for better food safety.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

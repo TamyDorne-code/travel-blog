@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>North America - Destinations | My Travel Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            min-height: 100vh;
+        }
+        nav {
+            background: rgba(71, 135, 219, 0.95);
+            color: #fff;
+            padding: 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(71,135,219,0.08);
+        }
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav button {
+            background: none;
+            color: #fff;
+            border: none;
+            margin: 0;
+            padding: 22px 48px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 0;
+            cursor: pointer;
+            letter-spacing: 2px;
+            transition: background 0.2s, color 0.2s;
+        }
+        nav button.active, nav button:hover {
+            background: #b2d8b2;
+            color: #333;
+        }
+        .hero {
+            background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            min-height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            text-shadow: 0 4px 24px #0008;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            margin-bottom: 40px;
+        }
+        .hero h1 {
+            font-size: 2em;
+            margin: 0 0 10px 0;
+            letter-spacing: 4px;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.1em;
+            margin: 0;
+            font-weight: 400;
+        }
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 40px 30px;
+        }
+        h2 {
+            color: #4787db;
+            margin-top: 0;
+            font-size: 2em;
+        }
+        .card-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            margin-top: 30px;
+        }
+        .card {
+            background: #f7f7f7;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(71,135,219,0.07);
+            overflow: hidden;
+            width: 260px;
+            flex: 1 1 260px;
+            min-width: 220px;
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 18px 16px 14px 16px;
+        }
+        .card-content h3 {
+            margin: 0 0 8px 0;
+            color: #4787db;
+            font-size: 1.2em;
+        }
+        .card-content p {
+            margin: 0;
+            color: #444;
+            font-size: 1em;
+        }
+        @media (max-width: 700px) {
+            .hero h1 { font-size: 1.3em; }
+            .hero p { font-size: 1em; }
+            main { padding: 18px 6vw; }
+            .card-grid { flex-direction: column; gap: 18px; }
+            .card { width: 100%; min-width: unset; }
+            nav button { padding: 14px 10px; font-size: 1em; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <button onclick="location.href='starr.html'">Home</button>
+            <button class="active">Destinations</button>
+            <button onclick="location.href='starr.html#tips'">Tips</button>
+            <button onclick="location.href='starr.html#experiences'">Experiences</button>
+            <button onclick="history.back()" style="margin-left:30px;">&#8592; Back</button>
+        </div>
+    </nav>
+    <div class="hero">
+        <h1>North America</h1>
+        <p>National parks, skyscrapers, and road trips.</p>
+    </div>
+    <main>
+        <h2>Top Places to Visit in North America</h2>
+        <div class="card-grid">
+            <div class="card">
+                <img src="https://57hours.com/wp-content/uploads/2019/08/Grand-Canyon-Hiking.jpg" alt="Grand Canyon">
+                <div class="card-content">
+                    <h3>Grand Canyon, USA</h3>
+                    <p>Stunning natural wonder and breathtaking views.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://www.nyit.edu/wp-content/uploads/nyc-campus-hero.jpg" alt="New York">
+                <div class="card-content">
+                    <h3>New York City, USA</h3>
+                    <p>Iconic skyline, Broadway, and endless attractions.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://www.travelandleisure.com/thmb/8WanQgo0ixv_tD2hCP637wOtY34=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-header-lake-louise-banff-national-park-WINTERBANFF0325-1c2796d674004801879e887753ee19f5.jpg" alt="Banff">
+                <div class="card-content">
+                    <h3>Banff National Park, Canada</h3>
+                    <p>Majestic mountains, turquoise lakes, and wildlife.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://e7jecw7o93n.exactdn.com/wp-content/uploads/2019/05/LosAngelesCA.jpg?lossy=1&ssl=1" alt="Los Angeles">
+                <div class="card-content">
+                    <h3>Los Angeles, USA</h3>
+                    <p>Hollywood, beaches, and vibrant culture.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://www.zolo.ca/blog/wp-content/uploads/2018/02/downtown-city-of-toronto.jpg" alt="Toronto">
+                <div class="card-content">
+                    <h3>Toronto, Canada</h3>
+                    <p>Diverse culture, CN Tower, and vibrant neighborhoods.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://www.toonietours.ca/wp-content/uploads/2020/11/523449_523449_12.webp" alt="Vancouver">
+                <div class="card-content">
+                    <h3>Vancouver, Canada</h3>
+                    <p>Stunning waterfront, mountains, and multicultural vibe.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://imgproxy.divecdn.com/eWErotUr_WgxkKt_74aaHH_MJsc8jVoqD_nUpbwTpD0/g:ce/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMTcwMzk4MDU1LmpwZw==.webp" alt="Nashville">
+                <div class="card-content">
+                    <h3>Nashville, USA</h3>
+                    <p>Music city with rich history and vibrant nightlife.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://lp-cms-production.imgix.net/2024-11/500pxRF69947955.jpg?auto=format,compress&q=72&w=1440&h=810&fit=crop" alt="Quebec City">
+                <div class="card-content">
+                    <h3>Quebec City, Canada</h3>
+                    <p>Historic charm, cobblestone streets, and French culture.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://content.r9cdn.net/rimg/dimg/6e/52/9f9ef153-city-22085-15c355238ae.jpg?crop=true&width=1366&height=768&xhint=1758&yhint=1555" alt="New Orleans">
+                <div class="card-content">
+                    <h3>New Orleans, USA</h3>
+                    <p>Jazz, Creole cuisine, and vibrant festivals.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://content.r9cdn.net/rimg/dimg/17/74/0ca6e469-city-30651-1632b88f203.jpg?width=1366&height=768&xhint=2635&yhint=1507&crop=true" alt="Miami">
+                <div class="card-content">
+                    <h3>Miami, USA</h3>
+                    <p>LIvely beach scene and strong Latin culture.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://res.cloudinary.com/aenetworks/image/upload/c_fill,ar_2,w_3840,h_1920,g_auto/dpr_auto/f_auto/q_auto:eco/v1/gettyimages-1244283878-2?_a=BAVAZGDX0" alt="San Francisco">
+                <div class="card-content">
+                    <h3>San Francisco, USA</h3>
+                    <p>Golden Gate Bridge, Alcatraz, and diverse neighborhoods.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://static01.nyt.com/images/2020/06/09/opinion/09Rice1/08Rice1-articleLarge.jpg?quality=75&auto=webp&disable=upscale" alt="Washington, D.C.">
+                <div class="card-content">
+                    <h3>Washington, D.C., USA</h3>
+                    <p>National monuments, museums, and political history.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

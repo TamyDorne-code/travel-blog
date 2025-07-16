@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Antarctica Destinations | My Travel Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { margin: 0; font-family: 'Segoe UI', Arial, sans-serif; background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%); min-height: 100vh;}
+        nav { background: rgba(71, 135, 219, 0.95); color: #fff; padding: 0; text-align: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(71,135,219,0.08);}
+        .nav-container { display: flex; justify-content: center; align-items: center;}
+        nav button { background: none; color: #fff; border: none; margin: 0; padding: 22px 48px; font-size: 1.2em; font-weight: bold; border-radius: 0; cursor: pointer; letter-spacing: 2px; transition: background 0.2s, color 0.2s;}
+        nav button.active, nav button:hover { background: #b2d8b2; color: #333;}
+        .hero { background: url('https://photographygloves.com/cdn/shop/articles/the-best-glove-for-your-winter-holiday-923623_1600x.png?v=1574867761') center/cover no-repeat; min-height: 220px; display: flex; align-items: center; justify-content: center; flex-direction: column; color: #fff; text-shadow: 0 4px 24px #0008; border-bottom-left-radius: 40px; border-bottom-right-radius: 40px; margin-bottom: 40px;}
+        .hero h1 { font-size: 2em; margin: 0 0 10px 0; letter-spacing: 4px; font-weight: bold;}
+        .hero p { font-size: 1.1em; margin: 0; font-weight: 400;}
+        main { max-width: 900px; margin: 40px auto; background: #fff; border-radius: 18px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); padding: 40px 30px;}
+        h2 { color: #4787db; margin-top: 0; font-size: 2em;}
+        .card-grid { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 30px;}
+        .card { background: #f7f7f7; border-radius: 14px; box-shadow: 0 2px 12px rgba(71,135,219,0.07); overflow: hidden; width: 260px; flex: 1 1 260px; min-width: 220px; max-width: 100%; display: flex; flex-direction: column;}
+        .card img { width: 100%; height: 160px; object-fit: cover;}
+        .card-content { padding: 18px 16px 14px 16px;}
+        .card-content h3 { margin: 0 0 8px 0; color: #4787db; font-size: 1.2em;}
+        .card-content p { margin: 0; color: #444; font-size: 1em;}
+        @media (max-width: 700px) { .hero h1 { font-size: 1.3em; } .hero p { font-size: 1em; } main { padding: 18px 6vw; } .card-grid { flex-direction: column; gap: 18px; } .card { width: 100%; min-width: unset; } nav button { padding: 14px 10px; font-size: 1em; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <button onclick="location.href='starr.html'">Home</button>
+            <button class="active">Destinations</button>
+            <button onclick="location.href='antarctica-tips.html'">Tips</button>
+            <button onclick="location.href='antarctica-experiences.html'">Experiences</button>
+            <button onclick="history.back()" style="margin-left:30px;">&#8592; Back</button>
+        </div>
+    </nav>
+    <div class="hero">
+        <h1>Antarctica</h1>
+        <p>Ice, wildlife, and expedition adventures.</p>
+    </div>
+    <main>
+        <h2>Top Places to Visit in Antarctica</h2>
+        <div class="card-grid">
+            <div class="card">
+                <img src="https://www.nrel.gov/images/libraries/news/features/2024/20240620-south-pole-ceremonial.jpg?sfvrsn=bb7113d4_0 alt="South Pole">
+                <div class="card-content">
+                    <h3>South Pole</h3>
+                    <p>The southernmost point on Earth, reached by special expeditions.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://www.divergenttravelers.com/wp-content/uploads/httpswww.quarkexpeditions.comenutm_sourcefoc-divergent-travelersutm_mediumreferralutm_campaignantutm_contentblog.jpg" alt="Deception Island">
+                <div class="card-content">
+                    <h3>Deception Island</h3>
+                    <p>Volcanic island with hot springs and penguin colonies.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://holeinthedonut.com/wp-content/uploads/2020/03/Antarctica-glacier-face-in-Paradise-Harbour.jpg" alt="Paradise Bay">
+                <div class="card-content">
+                    <h3>Paradise Bay</h3>
+                    <p>Stunning glaciers, icebergs and breathtaking scenery.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://www.journeylatinamerica.com/app/uploads/destinations/antarctica/south-shetland/ant_southshetlands_shutterstock_157500485-1200x800-c-center.jpg" alt="South Shetland Islands">
+                <div class="card-content">
+                    <h3>South Shetland Islands</h3>
+                    <p>Home to diverse wildlife and stunning landscapes.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/4a/28/f5/antarctic-peninsula.jpg?w=1000&h=1000&s=1" alt="Antarctic Peninsula">
+                <div class="card-content">
+                    <h3>Antarctic Peninsula</h3>
+                    <p>Rich in wildlife, glaciers, and natural harbours.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://www.secretatlas.com/img/asset/YXNzZXRzL2hhbmRib29rL3NvdXRoLWdlb3JnaWEtZGVzdGluYXRpb24tbWljcm8tZ3VpZGUvaG93LXRvLWdldC10by1zb3V0aC1nZW9yZ2lhL3dpbGRsaWZlLWJlYWNoLXNvdXRoLWdlb3JnaWEtc2h1dHRlcnN0b2NrLXNlY3JldC1hdGxhcy5qcGc/wildlife-beach-south-georgia-shutterstock-secret-atlas.jpg?w=1800&h=958&s=151de723d98a918f3f8b90525e424e7d" alt="South Georgia">
+                <div class="card-content">
+                    <h3>South Georgia</h3>
+                    <p>Known for its wildlife, including seals and penguins.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://www.goldenvisas.com/images/Falkland-Islands-Residency-and-Citizenship-by-Investment-595xh.jpg" alt="Falkland Islands">
+                <div class="card-content">
+                    <h3>Falkland Islands</h3>
+                    <p>Remote islands with unique wildlife and rich history.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://cdn.adventure-life.com/51/97/0/m8r9jrfm/1300x820.webp" alt="Lemaire Channel">
+                <div class="card-content">
+                    <h3>Lemaire Channel</h3>
+                    <p>Scenic waterway known for its dramatic cliffs and icebergs.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://www.ukaht.org/media/reghuwhn/mdp-1112-dsc_1155.jpeg?crop=0,0,0.091393680945919764,0.15580468697237809&cropmode=percentage&width=650&height=400&rnd=132611565957330000&format=webp" alt="Port Lockroy">
+                <div class="card-content">
+                    <h3>Port Lockroy</h3>
+                    <p>Historic British research station and museum.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://www.antarcticaguide.com/storage/app/uploads/public/5fa/a74/e6d/5faa74e6d2150678810529.jpg" alt="Ross Sea">
+                <div class="card-content">
+                    <h3>Ross Sea</h3>
+                    <p>Large colony of peguins, majestic glaciers, historical sites, icebergs and immense natural beauty.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://images.tripadeal.com.au/cdn-cgi/image/format=auto,width=1200/https://cstad.s3.ap-southeast-2.amazonaws.com/5779_King_George_Island_and_Antarctic_Quest_WEB_HERO_1_Wind_Peninsular.jpg" alt="King George Island">
+                <div class="card-content">
+                    <h3>King George Island</h3>
+                    <p>Largest island in the South Shetland Islands, known for its research stations.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://media.cna.al/cna.al/media3/-640-0-1727535968xb2bcacd0-7ce1-11ef-b66d-034eed51208djpg-315.webp" alt="Colossal Penguin Colony">
+                <div class="card-content">
+                    <h3>Colossal Penguin Colony</h3>
+                    <p>One of the largest penguin colonies in the world, located on Snow Hill Island.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

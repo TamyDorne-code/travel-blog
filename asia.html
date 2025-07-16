@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Asia - Destinations | My Travel Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            min-height: 100vh;
+        }
+        nav {
+            background: rgba(71, 135, 219, 0.95);
+            color: #fff;
+            padding: 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(71,135,219,0.08);
+        }
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav button {
+            background: none;
+            color: #fff;
+            border: none;
+            margin: 0;
+            padding: 22px 48px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 0;
+            cursor: pointer;
+            letter-spacing: 2px;
+            transition: background 0.2s, color 0.2s;
+        }
+        nav button.active, nav button:hover {
+            background: #b2d8b2;
+            color: #333;
+        }
+        .hero {
+            background: url('https://outeredit.com/wp-content/uploads/2020/06/masthead-16.jpg') center/cover no-repeat;
+            min-height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            text-shadow: 0 4px 24px #0008;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            margin-bottom: 40px;
+        }
+        .hero h1 {
+            font-size: 2em;
+            margin: 0 0 10px 0;
+            letter-spacing: 4px;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.1em;
+            margin: 0;
+            font-weight: 400;
+        }
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 40px 30px;
+        }
+        h2 {
+            color: #4787db;
+            margin-top: 0;
+            font-size: 2em;
+        }
+        .card-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            margin-top: 30px;
+        }
+        .card {
+            background: #f7f7f7;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(71,135,219,0.07);
+            overflow: hidden;
+            width: 260px;
+            flex: 1 1 260px;
+            min-width: 220px;
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 18px 16px 14px 16px;
+        }
+        .card-content h3 {
+            margin: 0 0 8px 0;
+            color: #4787db;
+            font-size: 1.2em;
+        }
+        .card-content p {
+            margin: 0;
+            color: #444;
+            font-size: 1em;
+        }
+        @media (max-width: 700px) {
+            .hero h1 { font-size: 1.3em; }
+            .hero p { font-size: 1em; }
+            main { padding: 18px 6vw; }
+            .card-grid { flex-direction: column; gap: 18px; }
+            .card { width: 100%; min-width: unset; }
+            nav button { padding: 14px 10px; font-size: 1em; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <button onclick="location.href='starr.html'">Home</button>
+            <button class="active">Destinations</button>
+            <button onclick="location.href='starr.html#tips'">Tips</button>
+            <button onclick="location.href='starr.html#experiences'">Experiences</button>
+            <button onclick="history.back()" style="margin-left:30px;">&#8592; Back</button>
+        </div>
+    </nav>
+    <div class="hero">
+        <h1>Asia</h1>
+        <p>Temples, bustling cities, and diverse landscapes.</p>
+    </div>
+    <main>
+        <h2>Top Places to Visit in Asia</h2>
+        <div class="card-grid">
+            <div class="card">
+                <img src="https://media.cntraveler.com/photos/678166b8a51cc7c3458df25a/16:9/w_2580,c_limit/pexels-Aleksandar%20Pasaric-2506923.jpg" alt="Tokyo">
+                <div class="card-content">
+                    <h3>Tokyo, Japan</h3>
+                    <p>Unique blend of modern and traditional culture, a thriving culinary scene, and vibrant entertainment</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://image.freshnewsasia.com/2021//fn-2021-12-13-16-15-29-0.jpg" alt="Angkor Wat">
+                <div class="card-content">
+                    <h3>Angkor Wat, Cambodia</h3>
+                    <p>The world's largest temple complex and a UNESCO World Heritage site.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://variety.com/wp-content/uploads/2020/01/ocean-park-hong-kong-cr-res-shutterstock_editorial_3904675a.jpg" alt="Ocean Park">
+                <div class="card-content">
+                    <h3>Ocean Park, Hong Kong</h3>
+                    <p>Diverse animal collection, giant pandas and unique combination of theme park and zoo elements.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://www.thecontinenthotel.com/wp-content/uploads/2024/04/Travel-Hub-Thailand-tour-%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%95%E0%B8%A5%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%8A%E0%B8%B1%E0%B8%99.webp" alt="Bangkok">
+                <div class="card-content">
+                    <h3>Bangkok, Thailand</h3>
+                    <p>Vibrant street life, floating markets, and delicious food.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://www.johansens.com/wp-content/uploads/2016/08/Thailand-AYANA-Estate-Bali-73-e1673272835586.jpg" alt="Bali">
+                <div class="card-content">
+                    <h3>Bali, indonesia</h3>
+                    <p>Magical and alluring beaches and landscapes, Balinese Hindu culture, people and customs.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://trektajikistan.com/wp-content/uploads/2020/10/bolshoi-allo-3.jpg" alt="Fann Mountains">
+                <div class="card-content">
+                    <h3>Fann Mountains, Tajikistan</h3>
+                    <p>Stunning mountain scenery, crystal-clear lakes, and diverse wildlife.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://www.sheridanuae.com/wp-content/uploads/2023/09/GettyImages-169994723-5b50a446c9e77c001a2ed286.jpg" alt="Grand Mosque">
+                <div class="card-content">
+                    <h3>Sheikh Zayed Grand Mosque, Abu Dhabi</h3>
+                    <p>Magnificent and monumental mosque.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://cdn.shopify.com/s/files/1/0155/3951/files/taiwan-tea-farmer-high-mountain-oolong.jpg?v=1737851983" alt="Taiwan">
+                <div class="card-content">
+                    <h3>Tea-cold mountains, Taiwan</h3>
+                    <p>Rich culture, stunning landscapes, and lofty tea farms.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://t4.ftcdn.net/jpg/00/66/08/39/360_F_66083932_5ELudVIJNu0aXjduga31AE5SP9Tz9MD4.jpg" alt="Bagan">
+                <div class="card-content">
+                    <h3>Bagan, Myanmar</h3>
+                    <p>Thousand of temples and Bagan hot air balloon.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://s3.ap-south-1.amazonaws.com/zo-media/blog_photo/old/golden-triangle_tAD3EXv.jpg" alt="Golden Triangle">
+                <div class="card-content">
+                    <h3>Golden Triangle, India</h3>
+                    <p>Iconic landmarks, rich history, and vibrant culture.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://tourscanner.com/blog/wp-content/uploads/choses-a-faire-en-Cappadoce.jpeg" alt="Cappadocia">
+                <div class="card-content">
+                    <h3>Cappadocia, Turkey</h3>
+                    <p>Unique rock formations, hot air balloon rides, and ancient cave dwellings.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://cdn.destguides.com/files/store/itinerarystop/44037/background_image/webp_medium_202112291737-4f1ff52cb5e8064c631988d8d87f8479.webp" alt="Seoul">
+                <div class="card-content">
+                    <h3>Seoul, South Korea</h3>
+                    <p>Beautiful and vibrant food scene.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

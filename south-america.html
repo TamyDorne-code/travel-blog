@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>South America - Destinations | My Travel Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            min-height: 100vh;
+        }
+        nav {
+            background: rgba(71, 135, 219, 0.95);
+            color: #fff;
+            padding: 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(71,135,219,0.08);
+        }
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav button {
+            background: none;
+            color: #fff;
+            border: none;
+            margin: 0;
+            padding: 22px 48px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 0;
+            cursor: pointer;
+            letter-spacing: 2px;
+            transition: background 0.2s, color 0.2s;
+        }
+        nav button.active, nav button:hover {
+            background: #b2d8b2;
+            color: #333;
+        }
+        .hero {
+            background: url('https://s3.amazonaws.com/marquee-test-akiaisur2rgicbmpehea/DM9ZrEnRR6lLYV7pwZKb_VS_070124_DGTL_LA.jpg') center/cover no-repeat;
+            min-height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            text-shadow: 0 4px 24px #0008;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            margin-bottom: 40px;
+        }
+        .hero h1 {
+            font-size: 2em;
+            margin: 0 0 10px 0;
+            letter-spacing: 4px;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.1em;
+            margin: 0;
+            font-weight: 400;
+        }
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 40px 30px;
+        }
+        h2 {
+            color: #4787db;
+            margin-top: 0;
+            font-size: 2em;
+        }
+        .card-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            margin-top: 30px;
+        }
+        .card {
+            background: #f7f7f7;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(71,135,219,0.07);
+            overflow: hidden;
+            width: 260px;
+            flex: 1 1 260px;
+            min-width: 220px;
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 18px 16px 14px 16px;
+        }
+        .card-content h3 {
+            margin: 0 0 8px 0;
+            color: #4787db;
+            font-size: 1.2em;
+        }
+        .card-content p {
+            margin: 0;
+            color: #444;
+            font-size: 1em;
+        }
+        @media (max-width: 700px) {
+            .hero h1 { font-size: 1.3em; }
+            .hero p { font-size: 1em; }
+            main { padding: 18px 6vw; }
+            .card-grid { flex-direction: column; gap: 18px; }
+            .card { width: 100%; min-width: unset; }
+            nav button { padding: 14px 10px; font-size: 1em; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <button onclick="location.href='starr.html'">Home</button>
+            <button class="active">Destinations</button>
+            <button onclick="location.href='starr.html#tips'">Tips</button>
+            <button onclick="location.href='starr.html#experiences'">Experiences</button>
+            <button onclick="history.back()" style="margin-left:30px;">&#8592; Back</button>
+        </div>
+    </nav>
+    <div class="hero">
+        <h1>South America</h1>
+        <p>Rainforests, mountains, and ancient ruins.</p>
+    </div>
+    <main>
+        <h2>Top Places to Visit in South America</h2>
+        <div class="card-grid">
+            <div class="card">
+                <img src="https://i.natgeofe.com/n/819ea774-aa80-435e-af5a-ae56efee7ce3/92491.jpg" alt="Machu Picchu">
+                <div class="card-content">
+                    <h3>Machu Picchu, Peru</h3>
+                    <p>Ancient Incan city high in the Andes mountains.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://www.pandotrip.com/wp-content/uploads/2022/07/Christ-the-Redeemer-Rio-de-Janeiro-Brazil.jpg" alt="Rio de Janeiro">
+                <div class="card-content">
+                    <h3>Rio de Janeiro, Brazil</h3>
+                    <p>Famous beaches, Christ the Redeemer, and Carnival.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://pure-travelgroup.com/wp-content/uploads/2024/03/Chile-Argentina.jpg" alt="Patagonia">
+                <div class="card-content">
+                    <h3>Patagonia, Argentina & Chile</h3>
+                    <p>Stunning glaciers, mountains, and wild landscapes.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://cartagenavip.net/wp-content/uploads/Modern_Zone_At_Cartagena_De_India_In_Bolivar_Colombia._original_2492508-1024x576.jpg" alt="Cartagena">
+                <div class="card-content">
+                    <h3>Cartagena, Colombia</h3>
+                    <p>A gorgeous fishing village, exellent beaches and a historic old town.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://www.intrepidtravel.com/adventures/wp-content/uploads/2017/03/Quito-e1489704477560-1170x658.jpg" alt="Quito">
+                <div class="card-content">
+                    <h3>Quito, Ecuador</h3>
+                    <p>Historic city with colonial architecture and stunning views.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,f_jpg,h_300,q_65,w_550/v1/clients/lapazmexico/promocion_La_Paz_3x2_1_497bf712-7ce3-435a-b74a-b62c54366c57.jpg" alt="La Paz">
+                <div class="card-content">
+                    <h3>La Paz, Bolivia</h3>
+                    <p>Exciting and unique city. Streets here climb through neighborhoods so steep that the easiest way to get around is by cable car, used by everyone from tourists to commuters.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/06/73/3c/44.jpg" alt="Mendoza">
+                <div class="card-content">
+                    <h3>Mendoza, Argentina</h3>
+                    <p>Famous for its wine, especially Malbec.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://images.fineartamerica.com/images-medium-large-5/easter-island-statues-steve-allenscience-photo-library.jpg" alt="Easter Island">
+                <div class="card-content">
+                    <h3>Easter Island, Chile</h3>
+                    <p>Remote island with mysterious Moai statues.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/9b/2d/c3/caption.jpg?w=1200&h=-1&s=1&cx=1920&cy=1080&chk=v1_996df743f3db52326b54" alt="Santiago">
+                <div class="card-content">
+                    <h3>Santiago, Chile</h3>
+                    <p>Vibrant capital city with a mix of modern and historic.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://img.static-kl.com/images/media/92920BE9-2C5B-425F-9843732EB24D0A2D" alt="Bogota">
+                <div class="card-content">
+                    <h3>Bogota, Colombia</h3>
+                    <p>Delicious food , fine eating, budding cultural scene and gorgeous landscapes.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://www.thetimes.com/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F83f7fb9d-7204-429e-b6c1-59075653ea83.jpg?crop=1564%2C880%2C318%2C0" alt="Iguazu Falls">
+                <div class="card-content">
+                    <h3>Iguazu Falls, Argentina & Brazil</h3>
+                    <p>One of the largest and most impressive waterfalls in the world.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://i.natgeofe.com/n/03fe5d24-dc23-4b18-82d7-0bb05a452a91/citylife_montevideo_2024_09_NatGeo_6951_ukHR_RESIZED.jpg" alt="Montevideo">
+                <div class="card-content">
+                    <h3>Montevideo</h3>
+                    <p>City full of charms, where history meets tranquility. It's scenic beaches and lively festivals create an atmosphere that's both relaxing and breathtaking.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Asia Experiences | My Travel Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            min-height: 100vh;
+        }
+        nav {
+            background: rgba(71, 135, 219, 0.95);
+            color: #fff;
+            padding: 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(71,135,219,0.08);
+        }
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav button {
+            background: none;
+            color: #fff;
+            border: none;
+            margin: 0;
+            padding: 22px 48px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 0;
+            cursor: pointer;
+            letter-spacing: 2px;
+            transition: background 0.2s, color 0.2s;
+        }
+        nav button.active, nav button:hover {
+            background: #b2d8b2;
+            color: #333;
+        }
+        .hero {
+            background: url('https://static.india.com/wp-content/uploads/2015/06/5-south-east-asian-countries.jpg') center/cover no-repeat;
+            min-height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            text-shadow: 0 4px 24px #0008;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            margin-bottom: 40px;
+        }
+        .hero h1 {
+            font-size: 2em;
+            margin: 0 0 10px 0;
+            letter-spacing: 4px;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.1em;
+            margin: 0;
+            font-weight: 400;
+        }
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 40px 30px;
+        }
+        h2 {
+            color: #4787db;
+            margin-top: 0;
+            font-size: 2em;
+        }
+        .exp-list {
+            font-size: 1.1em;
+            color: #444;
+            line-height: 1.7;
+            list-style: disc inside;
+        }
+        @media (max-width: 700px) {
+            .hero h1 { font-size: 1.3em; }
+            .hero p { font-size: 1em; }
+            main { padding: 18px 6vw; }
+            nav button { padding: 14px 10px; font-size: 1em; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <button onclick="location.href='starr.html'">Home</button>
+            <button onclick="location.href='starr.html#destinations'">Destinations</button>
+            <button onclick="location.href='starr.html#tips'">Tips</button>
+            <button class="active">Experiences</button>
+            <button onclick="history.back()" style="margin-left:30px;">&#8592; Back</button>
+        </div>
+    </nav>
+    <div class="hero">
+        <h1>Asia Experiences</h1>
+        <p>Temples, street food, and festival tales from Asia.</p>
+    </div>
+<main>
+    <h2>Unforgettable Experiences in Asia</h2>
+
+    <div class="region-section">
+        <h3>East Asia</h3>
+        <ul class="exp-list">
+            <li><strong>Cherry Blossom Season (Japan):</strong> Picnicking under blooming sakura trees in Tokyo.</li>
+            <li><strong>Great Wall Hike (China):</strong> Walking along ancient stones with breathtaking mountain views.</li>
+            <li><strong>Temple Stay (South Korea):</strong> Experience Buddhist monastic life and meditation.</li>
+            <li><strong>Night Markets (Taiwan):</strong> Savor street food and shop in vibrant night markets.</li>
+        </ul>
+    </div>
+
+    <div class="region-section">
+        <h3>Southeast Asia</h3>
+        <ul class="exp-list">
+            <li><strong>Exploring Angkor Wat (Cambodia):</strong> Sunrise at the world’s largest temple complex.</li>
+            <li><strong>Street Food Tour (Thailand):</strong> Sampling pad thai, mango sticky rice, and spicy curries in Bangkok.</li>
+            <li><strong>Floating Markets (Vietnam):</strong> Shopping and eating from boats on the Mekong Delta.</li>
+            <li><strong>Island Hopping (Philippines):</strong> Discovering white sand beaches and turquoise waters.</li>
+        </ul>
+    </div>
+
+    <div class="region-section">
+        <h3>South Asia</h3>
+        <ul class="exp-list">
+            <li><strong>Taj Mahal Visit (India):</strong> Marvel at the iconic symbol of love at sunrise.</li>
+            <li><strong>Tea Plantations (Sri Lanka):</strong> Tour lush green hills and taste fresh Ceylon tea.</li>
+            <li><strong>Everest Base Camp Trek (Nepal):</strong> Hike through the Himalayas to the foot of the world’s highest peak.</li>
+            <li><strong>Traditional Festivals (Bangladesh):</strong> Experience colorful celebrations like Pohela Boishakh.</li>
+        </ul>
+    </div>
+
+    <div class="region-section">
+        <h3>Central Asia</h3>
+        <ul class="exp-list">
+            <li><strong>Silk Road Adventure (Uzbekistan):</strong> Explore ancient cities like Samarkand and Bukhara.</li>
+            <li><strong>Yurt Stay (Kyrgyzstan):</strong> Sleep in a traditional yurt on the shores of Issyk-Kul Lake.</li>
+            <li><strong>Almaty Mountains (Kazakhstan):</strong> Hike and ski in the scenic Tien Shan range.</li>
+        </ul>
+    </div>
+
+    <div class="region-section">
+        <h3>Western Asia (Middle East)</h3>
+        <ul class="exp-list">
+            <li><strong>Petra by Night (Jordan):</strong> Walk through the Siq to the Treasury lit by thousands of candles.</li>
+            <li><strong>Grand Bazaar (Turkey):</strong> Shop for spices, carpets, and crafts in Istanbul’s historic market.</li>
+            <li><strong>Desert Safari (UAE):</strong> Ride camels and watch the sunset over golden dunes.</li>
+        </ul>
+    </div>
+</main>
+</body>
+</html>

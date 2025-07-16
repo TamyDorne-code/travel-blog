@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Europe - Destinations | My Travel Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            min-height: 100vh;
+        }
+        nav {
+            background: rgba(71, 135, 219, 0.95);
+            color: #fff;
+            padding: 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(71,135,219,0.08);
+        }
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav button {
+            background: none;
+            color: #fff;
+            border: none;
+            margin: 0;
+            padding: 22px 48px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 0;
+            cursor: pointer;
+            letter-spacing: 2px;
+            transition: background 0.2s, color 0.2s;
+        }
+        nav button.active, nav button:hover {
+            background: #b2d8b2;
+            color: #333;
+        }
+        .hero {
+            background: url('https://www.parkonking.com.au/wp-content/uploads/2023/08/travelling-around-Europe-from-Australia.jpg') center/cover no-repeat;
+            min-height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            text-shadow: 0 4px 24px #0008;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            margin-bottom: 40px;
+        }
+        .hero h1 {
+            font-size: 2em;
+            margin: 0 0 10px 0;
+            letter-spacing: 4px;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.1em;
+            margin: 0;
+            font-weight: 400;
+        }
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 40px 30px;
+        }
+        h2 {
+            color: #4787db;
+            margin-top: 0;
+            font-size: 2em;
+        }
+        .card-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            margin-top: 30px;
+        }
+        .card {
+            background: #f7f7f7;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(71,135,219,0.07);
+            overflow: hidden;
+            width: 260px;
+            flex: 1 1 260px;
+            min-width: 220px;
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 18px 16px 14px 16px;
+        }
+        .card-content h3 {
+            margin: 0 0 8px 0;
+            color: #4787db;
+            font-size: 1.2em;
+        }
+        .card-content p {
+            margin: 0;
+            color: #444;
+            font-size: 1em;
+        }
+        @media (max-width: 700px) {
+            .hero h1 { font-size: 1.3em; }
+            .hero p { font-size: 1em; }
+            main { padding: 18px 6vw; }
+            .card-grid { flex-direction: column; gap: 18px; }
+            .card { width: 100%; min-width: unset; }
+            nav button { padding: 14px 10px; font-size: 1em; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <button onclick="location.href='starr.html'">Home</button>
+            <button class="active">Destinations</button>
+            <button onclick="location.href='starr.html#tips'">Tips</button>
+            <button onclick="location.href='starr.html#experiences'">Experiences</button>
+            <button onclick="history.back()" style="margin-left:30px;">&#8592; Back</button>
+        </div>
+    </nav>
+    <div class="hero">
+        <h1>Europe</h1>
+        <p>Historic cities, art, and beautiful countryside.</p>
+    </div>
+    <main>
+        <h2>Top Places to Visit in Europe</h2>
+        <div class="card-grid">
+            <div class="card">
+                <img src="https://media.craiyon.com/2025-04-02/IxU85ZMRQ_STOB2e2IfKTg.webp" alt="Paris">
+                <div class="card-content">
+                    <h3>Paris, France</h3>
+                    <p>The Eiffel Tower, Louvre Museum, and charming cafes.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://miro.medium.com/v2/resize:fit:1200/1*gfzxEKbwzFDI8L-h2FQSrw.jpeg" alt="Rome">
+                <div class="card-content">
+                    <h3>Rome, Italy</h3>
+                    <p>Ancient ruins, the Colosseum, and delicious Italian cuisine.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.goway.com/production/styles/visual_media_content_3xl/s3/geopages/regions/oia_village_1908485617.jpg?VersionId=yBz_f0IkLU.cIh9ixY3NBNK6hctTZoJv&h=f05b62f7&itok=BB486w4T" alt="Santorini">
+                <div class="card-content">
+                    <h3>Santorini, Greece</h3>
+                    <p>Whitewashed houses, blue domes, and stunning sunsets.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://media.istockphoto.com/id/1217344879/photo/view-of-york-old-city-in-the-twilight-england.jpg?s=612x612&w=0&k=20&c=gLAZOmwrAYgMO2JOAqyQsls_vN6A4472nVvhhywGR88=" alt="York">
+                <div class="card-content">
+                    <h3>York, England</h3>
+                    <p>Gorgeous park, the Museum Gardens loaded with plants and flowers to wander about. The shambles connect you to the real life Harry Potter scene.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://blondwayfarer.com/wp-content/uploads/2023/04/white-washing-houses-in-granada-spain.jpg" alt="Granada">
+                <div class="card-content">
+                    <h3>Granada, Spain</h3>
+                    <p>A stunning Moorish palace that is a UNESCO World Heritage Site.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://www.travelandleisure.com/thmb/vd5tU1ZaRSsA7fhBh6g1dJxGqIA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/dublin-ireland-city-night-WSDUBLIN0122-3cf329ea361f43d4a36fb81d18647fcd.jpg" alt="Dublin">
+                <div class="card-content">
+                    <h3>Dublin, Ireland</h3>
+                    <p>History, positive energy and amazing people.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://media.istockphoto.com/id/494314515/photo/panorama-of-ljubljana-slovenia-europe.jpg?s=612x612&w=0&k=20&c=1SbeSdqwM0JSxIDcACk-9zzo3yX8f3rsTG9pJUi3M8A=" alt="Ljubljana">
+                <div class="card-content">
+                    <h3>Ljubljana, Slovena</h3>
+                    <p>Very livable, lively city and fresh food from local markets.
+                    </p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://www.railbookers.com/sites/railbookers/files/styles/hero/public/media/images/dean_village_edinburgh.jpg?h=66c65d79&itok=RclnR-l0" alt="Edinburgh">
+                <div class="card-content">
+                    <h3>Edinburgh, Scotland</h3>
+                    <p>The city's distinct character, gothic architecture and rich cultural heritage.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://images.ctfassets.net/43cg184ejz07/3pC6IUn9pgR1BHTAmLS8ke/e4aea0185a6398e2381c6c8b6e7f76aa/Strasbourg_market.jpg?fm=jpg&w=1024&h=576&fit=fill" alt="Strasbourg">
+                <div class="card-content">
+                    <h3>Strasbourg, France</h3>
+                    <p>Ruins and wine are two hallmarks of Strasbourg. It has the biggest and best christmas market.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://media.istockphoto.com/id/1032684078/photo/view-to-city-hall-in-belfast.jpg?s=612x612&w=0&k=20&c=4PQUzTCSO7sbOtWWIuv0701JPvBaDinDv9-oYvuqhC0=" alt="Belfast">
+                <div class="card-content">
+                    <h3>Belfast, Northern Ireland</h3>
+                    <p>Belfast was the birthplace of the RMS Titanic, the world' most famous ship which, when it was constructed in the early 1900s, was longer than the height of the world's tallest building at 882 feet and six inches in length.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://assets.micontenthub.com/traveloffers/travel-tips/the-exterior-of-the-6th-century-byzantine-eastern-roman-hagia-sophia-istanbul_AwpCNMYXQ.jpg" alt="Istanbul">
+                <div class="card-content">
+                    <h3>Istanbul, Turkey</h3>
+                    <p>Unique position as a bridge between continents.</p>
+                </div>
+            </div>
+                        <div class="card">
+                <img src="https://visitalbaiulia.city/wp-content/uploads/Alba-Iulia-foto-1024x542-1.jpeg" alt="Alba Iulia">
+                <div class="card-content">
+                    <h3>Alba Iluia, Romania</h3>
+                    <p>Christian country, white truffle and wine production.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

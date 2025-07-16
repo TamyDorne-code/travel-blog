@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Australia Experiences | My Travel Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { margin: 0; font-family: 'Segoe UI', Arial, sans-serif; background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%); min-height: 100vh;}
+        nav { background: rgba(71, 135, 219, 0.95); color: #fff; padding: 0; text-align: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(71,135,219,0.08);}
+        .nav-container { display: flex; justify-content: center; align-items: center;}
+        nav button { background: none; color: #fff; border: none; margin: 0; padding: 22px 48px; font-size: 1.2em; font-weight: bold; border-radius: 0; cursor: pointer; letter-spacing: 2px; transition: background 0.2s, color 0.2s;}
+        nav button.active, nav button:hover { background: #b2d8b2; color: #333;}
+        .hero { background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFNn5OIJL2b7eW73XV8TVgpw5JwzSPqVnVIg&s') center/cover no-repeat; min-height: 220px; display: flex; align-items: center; justify-content: center; flex-direction: column; color: #fff; text-shadow: 0 4px 24px #0008; border-bottom-left-radius: 40px; border-bottom-right-radius: 40px; margin-bottom: 40px;}
+        .hero h1 { font-size: 2em; margin: 0 0 10px 0; letter-spacing: 4px; font-weight: bold;}
+        .hero p { font-size: 1.1em; margin: 0; font-weight: 400;}
+        main { max-width: 900px; margin: 40px auto; background: #fff; border-radius: 18px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); padding: 40px 30px;}
+        h2 { color: #4787db; margin-top: 0; font-size: 2em;}
+        .exp-list { font-size: 1.1em; color: #444; line-height: 1.7; list-style: disc inside;}
+        @media (max-width: 700px) { .hero h1 { font-size: 1.3em; } .hero p { font-size: 1em; } main { padding: 18px 6vw; } nav button { padding: 14px 10px; font-size: 1em; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <button onclick="location.href='australia.html'">Destinations</button>
+            <button onclick="location.href='australia-tips.html'">Tips</button>
+            <button class="active">Experiences</button>
+            <button onclick="history.back()" style="margin-left:30px;">&#8592; Back</button>
+        </div>
+    </nav>
+    <div class="hero">
+        <h1>Australia Experiences</h1>
+        <p>Outback adventures, reef diving, and city life.</p>
+    </div>
+ <main>
+        <h2>Unforgettable Experiences in Australia by Place</h2>
+        <ul class="exp-list">
+            <li>
+                <strong>Great Barrier Reef (Queensland):</strong>
+                Diving and snorkeling among vibrant coral reefs and marine life.
+            </li>
+            <li>
+                <strong>Uluru (Northern Territory):</strong>
+                Watching sunrise or sunset over the sacred red rock and learning about Aboriginal culture.
+            </li>
+            <li>
+                <strong>Sydney (New South Wales):</strong>
+                Surfing at Bondi Beach, climbing the Sydney Harbour Bridge, and exploring the Opera House.
+            </li>
+            <li>
+                <strong>Great Ocean Road (Victoria):</strong>
+                Taking a scenic road trip to see the Twelve Apostles and dramatic coastal cliffs.
+            </li>
+            <li>
+                <strong>Kangaroo Island (South Australia):</strong>
+                Spotting kangaroos, koalas, and sea lions in their natural habitats.
+            </li>
+            <li>
+                <strong>Tasmania:</strong>
+                Hiking in Cradle Mountain-Lake St Clair National Park and tasting local food in Hobart.
+            </li>
+            <li>
+                <strong>Perth & Western Australia:</strong>
+                Relaxing on Cottesloe Beach, visiting Rottnest Island, and exploring the Pinnacles Desert.
+            </li>
+        </ul>
+    </main>
+</body>
+</html>
