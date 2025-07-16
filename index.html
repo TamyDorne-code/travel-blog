@@ -9,8 +9,8 @@
 :root {
   --accent: #e94e77;
   --adventure-orange: #ff7e5f;
-  --adventure-gold: #feb47b;
-  --adventure-green: #43cea2;
+  --adventure-gold: #a84b04;
+  --adventure-green: #32cc2a;
   --adventure-blue: #3a8dde;
   --adventure-dark: #1a2a2f;
   --adventure-light: #fffbe6;
@@ -68,7 +68,7 @@ nav button.active, nav button:hover {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  color: #fffbe6;
+  color: #d8b91f;
   text-shadow: 0 4px 24px #0008;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
@@ -79,7 +79,7 @@ nav button.active, nav button:hover {
   margin: 0 0 10px 0;
   letter-spacing: 4px;
   font-weight: bold;
-  font-family: 'Permanent Marker', cursive, var(--adventure-font);
+  font-family: 'Permanent Marker', var(--adventure-font);
   color: var(--adventure-orange);
 }
 .hero p {
@@ -101,7 +101,7 @@ h5 {
 section, .home-main {
   max-width: 900px;
   margin: 40px auto;
-  background: rgba(255,251,230,0.92);
+  background: rgba(230, 208, 101, 0.92);
   border-radius: var(--adventure-radius);
   box-shadow: var(--adventure-shadow);
   padding: 40px 30px;
@@ -119,7 +119,8 @@ h2, .home-main h2 {
 }
 .home-main p {
   color: var(--adventure-green);
-  font-size: 1.2em;
+  font-size: 1.9em;
+  
   
 }
 
@@ -129,6 +130,8 @@ h2, .home-main h2 {
   flex-direction: column;
   gap: 28px;
   margin-top: 30px;
+  animation: fadeIn 3.7s;
+  background: #a7d6d4;
 }
 .card {
   display: flex;
@@ -199,7 +202,7 @@ h2, .home-main h2 {
 /* Adventure buttons */
 button, .save-btn, .logout-btn, .reset-btn {
   background: linear-gradient(90deg, var(--adventure-orange), var(--adventure-green));
-  color: #fff;
+  color: #e7da1a;
   border: none;
   border-radius: 10px;
   padding: 10px 22px;
