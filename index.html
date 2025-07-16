@@ -340,6 +340,92 @@ a {
   from { opacity: 0; transform: translateY(30px);}
   to { opacity: 1; transform: translateY(0);}
 }
+body, section, .home-main, .card-content p, .card-content h3, h2, h3, h5, nav, footer, label, span, p, ul, li, button {
+  color: #222 !important;
+}
+
+/* For cards and hero section, ensure text is dark and readable */
+.card, .card-content, .hero h1, .hero p, .hero, h5 {
+  color: #222 !important;
+  text-shadow: none !important;
+}
+
+/* For footer, navigation, and modal, use strong contrast */
+footer, nav, #contact-modal > div, #newsletter-modal > div {
+  color: #222 !important;
+  background: #fff !important;
+}
+
+/* For links, use a bold accent color */
+a {
+  color: #e94e77 !important;
+  text-decoration: underline;
+}
+
+/* For buttons, use dark text if background is light */
+button, .save-btn, .logout-btn, .reset-btn {
+  color: #222 !important;
+  background: linear-gradient(90deg, #ff7e5f, #43cea2) !important;
+}
+
+/* For modal headings and important labels */
+#contact-modal h3, #newsletter-modal h3, label, .icon {
+  color: #e94e77 !important;
+}
+
+/* Remove opacity from spans and paragraphs */
+span, p {
+  opacity: 1 !important;
+}
+
+/* For any element with inline color styles, override with !important */
+* {
+  color: #222 !important;
+}
+#travelife h2,
+#travelife h3,
+#travelife p,
+#travelife ul,
+#travelife li,
+#travelife label,
+#travelife div,
+#travelife button {
+  color: #222 !important;
+}
+
+#travelife .card,
+#travelife > div > div {
+  background: #f7f7f7 !important;
+  color: #222 !important;
+  box-shadow: 0 2px 12px #4787db22;
+}
+
+#travelife button {
+  background: #4787db !important;
+  color: #fff !important;
+}
+section,
+.home-main,
+#travelife .card,
+.card,
+.fancy-settings,
+#contact-modal > div,
+#newsletter-modal > div {
+  background: rgba(255,255,255,0.85) !important;
+  /* Optional: add a subtle blur for readability */
+  backdrop-filter: blur(2px);
+}
+
+/* Make sure text stays dark and readable */
+section,
+.home-main,
+#travelife .card,
+.card,
+.fancy-settings,
+#contact-modal > div,
+#newsletter-modal > div {
+  color: #222 !important;
+}
     </style>
 </head>
 <body>
@@ -657,17 +743,17 @@ a {
 <section id="travelife">
   <div style="text-align:center;">
     <h2 style="color:#4787db;font-size:2.3em;margin-bottom:10px;">🌟 TraveLife: Explore More About Our World</h2>
-<img src="https://cdn2.paraty.es/landmar/images/3fa33555746a4b9"
-     alt="TraveLife Logo" style="max-width:400px;width:60vw;height:auto;border-radius:18px;box-shadow:0 2px 16px #4787db33;margin-bottom:24px;">
-    <p style="font-size:1.18em;max-width:700px;margin:18px auto 30px auto;">
+    <img src="https://cdn2.paraty.es/landmar/images/3fa33555746a4b9"
+         alt="TraveLife Logo" style="max-width:400px;width:60vw;height:auto;border-radius:18px;box-shadow:0 2px 16px #4787db33;margin-bottom:24px;">
+    <p style="font-size:1.18em;max-width:700px;margin:18px auto 30px auto; color:#222;">
       Welcome to <b>TraveLife</b>! Dive into fascinating facts, global wonders, and inspiration to fuel your wanderlust. Discover interactive features, fun stats, and more!
     </p>
   </div>
   <div style="display:flex;flex-wrap:wrap;gap:32px;justify-content:center;">
     <!-- Fun Facts Card -->
-    <div style="background:#f7f7f7;border-radius:14px;box-shadow:0 2px 12px #4787db22;padding:24px 22px;max-width:340px;flex:1 1 300px;">
+    <div style="background:#e70d0d;border-radius:14px;box-shadow:0 2px 12px #4787db22;padding:24px 22px;max-width:340px;flex:1 1 300px; color:#222;">
       <h3 style="color:#4787db;">🌍 Fun Fact</h3>
-      <p id="travelife-fact" style="font-size:1.08em;margin-bottom:16px;">
+      <p id="travelife-fact" style="font-size:1.08em;margin-bottom:16px; color:#222;">
         Did you know? The Amazon rainforest produces more than 20% of the world's oxygen supply.
       </p>
       <button onclick="showRandomFact()" style="background:#4787db;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-weight:bold;">
@@ -675,9 +761,9 @@ a {
       </button>
     </div>
     <!-- World Stats Card -->
-    <div style="background:#f7f7f7;border-radius:14px;box-shadow:0 2px 12px #4787db22;padding:24px 22px;max-width:340px;flex:1 1 300px;">
+    <div style="background:#df0707;border-radius:14px;box-shadow:0 2px 12px #4787db22;padding:24px 22px;max-width:340px;flex:1 1 300px; color:#222;">
       <h3 style="color:#4787db;">🌐 World Stats</h3>
-      <ul style="list-style:none;padding:0;font-size:1.08em;line-height:1.7;">
+      <ul style="list-style:none;padding:0;font-size:1.08em;line-height:1.7; color:#222;">
         <li>Countries: <b>195</b></li>
         <li>Continents: <b>7</b></li>
         <li>Oceans: <b>5</b></li>
@@ -686,27 +772,26 @@ a {
       </ul>
     </div>
     <!-- Interactive Quiz Card -->
-    <div style="background:#f7f7f7;border-radius:14px;box-shadow:0 2px 12px #4787db22;padding:24px 22px;max-width:340px;flex:1 1 300px;">
+    <div style="background:#d81515;border-radius:14px;box-shadow:0 2px 12px #4787db22;padding:24px 22px;max-width:340px;flex:1 1 300px; color:#222;">
       <h3 style="color:#4787db;">🧠 Quick Quiz</h3>
-      <div id="quiz-question" style="font-size:1.08em;margin-bottom:10px;">
+      <div id="quiz-question" style="font-size:1.08em;margin-bottom:10px; color:#222;">
         What is the largest country in the world by area?
       </div>
       <div>
         <button onclick="checkQuizAnswer('Russia')" style="margin:4px 0;background:#4787db;color:#fff;border:none;border-radius:7px;padding:6px 14px;cursor:pointer;">Russia</button>
-        <button onclick="checkQuizAnswer('Canada')" style="margin:4px 0;background:#4787db;color:#fff;border:none;border-radius:7px;padding:6px 14px;cursor:pointer;">Canada</button>
+        <button onclick="checkQuizAnswer('Canada')" style="margin:4px 0;background:#4787db;color:#c01414;border:none;border-radius:7px;padding:6px 14px;cursor:pointer;">Canada</button>
         <button onclick="checkQuizAnswer('China')" style="margin:4px 0;background:#4787db;color:#fff;border:none;border-radius:7px;padding:6px 14px;cursor:pointer;">China</button>
       </div>
       <div id="quiz-result" style="margin-top:10px;font-weight:bold;color:#4787db;"></div>
     </div>
-
     <!-- Interactive Poll Card -->
-    <div style="background:#f7f7f7;border-radius:14px;box-shadow:0 2px 12px #4787db22;padding:24px 22px;max-width:340px;flex:1 1 300px;">
+    <div style="background:#d30c0c;border-radius:14px;box-shadow:0 2px 12px #4787db22;padding:24px 22px;max-width:340px;flex:1 1 300px; color:#222;">
       <h3 style="color:#4787db;">📊 Your Dream Destination</h3>
       <form id="poll-form" onsubmit="submitPoll();return false;">
-        <label><input type="radio" name="poll" value="Japan"> Canada</label><br>
-        <label><input type="radio" name="poll" value="Italy"> Italy</label><br>
-        <label><input type="radio" name="poll" value="Australia"> Australia</label><br>
-        <label><input type="radio" name="poll" value="Brazil"> Brazil</label><br>
+        <label style="color:#0e0d0d;"><input type="radio" name="poll" value="Japan"> Canada</label><br>
+        <label style="color:#222;"><input type="radio" name="poll" value="Italy"> Italy</label><br>
+        <label style="color:#141414;"><input type="radio" name="poll" value="Australia"> Australia</label><br>
+        <label style="color:#222;"><input type="radio" name="poll" value="Brazil"> Brazil</label><br>
         <button type="submit" style="margin-top:10px;background:#4787db;color:#fff;border:none;border-radius:7px;padding:6px 14px;cursor:pointer;">Vote</button>
       </form>
       <div id="poll-result" style="margin-top:10px;font-weight:bold;color:#4787db;"></div>
@@ -718,7 +803,6 @@ a {
     </button>
   </div>
 </section>
-
 
 
 </main>
