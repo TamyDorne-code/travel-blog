@@ -856,10 +856,16 @@ window.addEventListener('DOMContentLoaded', function() {
       applyDarkMode();
   }
 
-  // Settings menu toggle
- function toggleSettings() {
+function toggleSettings() {
   const menu = document.getElementById('settings-menu');
-  menu.classList.toggle('show');
+  // Toggle the 'show' class and also hide if already visible
+  if (menu.classList.contains('show')) {
+    menu.classList.remove('show');
+    menu.style.display = 'none';
+  } else {
+    menu.classList.add('show');
+    menu.style.display = '';
+  }
 }
 
   // Dark mode logic
